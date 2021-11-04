@@ -17,5 +17,4 @@
    - How does press activity influences boxoffice, ratings etc
      - counts of quotes as time series, for e.g. one month before/after release
      - deeper quote analysis (PCA, sentiment analysis)
-   - COME UP WITH MORE PRECISE QUESTIONS, I THINK WE CAN COME UP WITH BUNCH OF THEM
-   - sdgnlkgngoigjoi
+   - COME UP WITH MORE PRECISE QUESTIONS, I THINK WE CAN COME UP WITH BUNCH OF THE
