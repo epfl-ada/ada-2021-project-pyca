@@ -6,6 +6,8 @@ TO DO: write short description here
 
 <span style="color:blue">Maybe use some part of the intro here?</span>
 
+Recent research work has investigated the determinant of attributes in predicting the box-office revenues. Particularly, casting star have been considered as one of critical drivers for the success in the motion pictures industry. However, an important attribute of casting stars in forecasting the box-office receipts has remained mostly unnoticed: what and how the movie casting star claims in the press. It is important to understand whether and how the casting star’s quotations impact the box office success. Not only the familiarity of a casting star can influence the box office revenue, but also the casting star’s public claims might shape audiences’ attitudes and intentions to watch the certain movie. One salient research question in our study is to examine whether a casting star’s quotations in the press trigger an increase in the box office revenues over time. We also perform different machine learning models using cross validation method to show, what kind of content characteristics in casting star’s quotation might be related to the success in box office.
+
 
 ## Introduction
 
