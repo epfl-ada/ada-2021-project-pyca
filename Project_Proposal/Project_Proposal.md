@@ -4,6 +4,7 @@
 
 TO DO: write short description here
 
+<span style="color:blue">Maybe use some part of the intro here?</span>
 
 
 ## Introduction
@@ -18,8 +19,8 @@ The motion pictures industry has become a roaring success that breaks records of
 In our study, we combine the Quotabank database with the IMDb movie information dataset and box-office receipts from box office mojo. The first dataset of IMDb movie database contains six types of movie data: (*i*) movie name title; (*ii*) the genre of movie, such as comedy, fantasy category; (*iii*) the release year (we select the movies in the year 2015-2019); (*iv*) region (focus on U.S. and U.K.); (*v*) runtime (in minutes). The second dataset from box office moji displayed the financial performance of movies in: (*i*) the gross revenue (in U.S. dollars, the average revenue??); (*ii*) ranking of box-office receipts; (*iii*) total gross revenue (???); (*iv*) release date and year. After that, we merge both IMDb movie and box-office receipts datasets together by movie name and release year. Further we extract key persons in the movie (e.g., actor or actress of casting, director, and producer) in order to retrieve their quotations from the Quotabank database. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies. To understand the influence of quotations on box-office receipts, it is important to examine the **depth and size** (the quantity of movie associated person quotations before and after the release date of movie), the **breadth** (the number of movie associated persons involved in the quotations over time), the **dynamics of content in quotations** (e.g., the change of sentiment polarity in quotation over time, variations in topical categories of quotation) and **influential power of speaker** in the cast (the actor/actress/director's past revenue, the uniqueness/familiarity of pair in movie casting etc.) 
 
 ## Methods 
-
 TO DO: More details here, combination of machine learning and statistical modeling
+<span style="color:blue">I would be more precise here and start with really basic analysis (realistic)</span>
 
 1. Sentiment Analysis 
 
@@ -29,6 +30,9 @@ TO DO: More details here, combination of machine learning and statistical modeli
 
 4. Speaker's Influential power caculation (cosine similarity between speakers etc.)
 
+<span style="color:blue">Talk briefly about preliminary results?</span>
+![Press Activity](../analysis/quotes_around_release.png)
+![Press Activity](../analysis/gross_vs_occurrences.png)
 ## Project Timeline
 
 TO DO: finish timeline and responsible person here
