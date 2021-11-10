@@ -37,17 +37,22 @@ TO DO: More details here, combination of machine learning and statistical modeli
 ![Press Activity](../analysis/gross_vs_occurrences.png)
 ## Project Timeline
 
-Week 1 (8 Nov-14 Nov): Project proposal, web scraping all available datasets, initial descriptive analysis
+**Week 1** (8 Nov-14 Nov): Project proposal, web scraping all available datasets, initial descriptive analysis
 
-Week 2 (22 Nov-28 Nov): Feature selection for all variables, compute textual characteristics of quotation (e.g., sentiment polarity, topic classification), compute influential power of speaker, data cleaning and standardized
+**Week 2** (22 Nov-28 Nov): Feature selection for all variables, compute textual characteristics of quotation (e.g., sentiment polarity, topic classification), compute influential power of speaker, data cleaning and standardized
 
-Week 3 (29 Nov-5 Dec): Training data to predictive models (e.g., SVM and neural network) with cross validation methods, evaluate the model performance
+**Week 3** (29 Nov-5 Dec): Training data to predictive models (e.g., SVM and neural network) with cross validation methods, evaluate the model performance
 
-Week 4 (6 Dec-12 Dec): Wrap up results, visualize data and write data story down
+**Week 4** (6 Dec-12 Dec): Wrap up results, visualize data and write data story down
 
-Week 5 (13 Dec-17 Dec): Double check code and prepare the final storytelling about our data results
+**Week 5** (13 Dec-17 Dec): Double check code and prepare the final storytelling about our data results
 
+## Organization within the team
 
+[Alex] (https://github.com/PhotonAmpere): web scraping for datasets, initial data analysis, pre-process datasets, develop algorithm, model selection
+[Christos] (https://github.com/Yo-art7): Data visualisation, running tests and evaluate model performance
+[Pierre] (https://github.com/pgimalac): develop algorithm, feature engineering, model selection
+[Yiming] (https://github.com/yiming-li3008): analyze quotation text using NLP methods, write project data story
 
 
 
