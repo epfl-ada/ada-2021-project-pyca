@@ -13,7 +13,7 @@ The motion pictures industry has become a roaring success that breaks records of
 
 * *Does the quantity of quotations from movie associated persons provide a boost to box-office revenue?*
 * *Which textual factors from quotations influence the financial performance of movies, and when (i.e., before or after the release date)?*
-* Which model (e.g., SVM and Neural Network) has better predictive performance in forcasting the box-office receipts, given the spreading and content of quotations and influential power of speaker?*
+* *Which model (e.g., SVM and Neural Network) has better predictive performance in forcasting the box-office receipts, given the spreading and content of quotations and influential power of speaker?*
 
 
 
