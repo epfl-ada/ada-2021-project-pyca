@@ -1,4 +1,4 @@
-# Predicting Box-Office Receipts from News Quotations
+# Predicting Box-Office Receipts from Casting Star's Quotations
 
 
 ## Abstract
