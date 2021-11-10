@@ -49,10 +49,10 @@ TO DO: More details here, combination of machine learning and statistical modeli
 
 ## Organization within the team
 
-[Alex] (https://github.com/PhotonAmpere): web scraping for datasets, initial data analysis, pre-process datasets, develop algorithm, model selection
-[Christos] (https://github.com/Yo-art7): Data visualisation, running tests and evaluate model performance
-[Pierre] (https://github.com/pgimalac): develop algorithm, feature engineering, model selection
-[Yiming] (https://github.com/yiming-li3008): analyze quotation text using NLP methods, write project data story
+* [Alex] (https://github.com/PhotonAmpere): web scraping for datasets, initial data analysis, pre-process datasets, develop algorithm, model selection
+* [Christos] (https://github.com/Yo-art7): Data visualisation, running tests and evaluate model performance
+* [Pierre] (https://github.com/pgimalac): develop algorithm, feature engineering, model selection
+* [Yiming] (https://github.com/yiming-li3008): analyze quotation text using NLP methods, write project data story
 
 
 
