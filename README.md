@@ -46,8 +46,8 @@ After that, we merge both datasets together by movie name and release year. In t
 
 ## Methods
 
-**box office receipts and quotations** 
-In our preliminary analysis, we plot change of quantity in main crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
+**volume of quotations and box office revenue** 
+In our preliminary analysis, we plot change of quantity in the main film crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
 
 **Genre difference in the effect of quotes on revenue**
 Further we will examine the effect of the main crew’s quotations on revenue for each genre. We will perform a pair-wise KS statistic heatmap to show whether the genre differs in the main crew’s quotations, and plot the correlation graph between the main crew’s quotations and revenue for each movie category. 
