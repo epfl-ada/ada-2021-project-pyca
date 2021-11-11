@@ -34,11 +34,11 @@ More specifically, we will address the following key questions:
 
 In our study, we combine the Quotebank database with the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database].
 
-The first, ```IMDb movie database```, contains six types of movie data: (*i*) movie name title; (*ii*) the genre of movie, such as comedy, fantasy category; (*iii*) the release year (we select the movies in the year 2015-2019); (*iv*) region (focus on U.S. and U.K.); (*v*) runtime (in minutes).
+Firstly, ```IMDb movie database```, contains six types of movie data: (*i*) movie name title; (*ii*) the genre of movie, such as comedy, fantasy category; (*iii*) the release year (we select the movies in the year 2015-2019); (*iv*) region (focus on U.S. and U.K.); (*v*) runtime (in minutes).
 
-The second, ```Box Office Mojo```, displayed the financial performance of movies in: (*i*) the gross revenue (in U.S. dollars, the average revenue??); (*ii*) ranking of box-office receipts; (*iii*) total gross revenue (???); (*iv*) release date and year.
+Second, ```Box Office Mojo```, displayed the financial performance of movies in: (*i*) the gross revenue (in U.S. dollars); (*ii*) ranking of box-office receipts; (*iii*) total gross revenue (in U.S. dollars); (*iv*) release date and year.
 
-After that, we merge both datasets together by movie name and release year. Further we extract key people in the movie (e.g., actors and actresses, director, and producer) in order to retrieve their quotations from the ```Quotebank``` database. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies.
+After that, we merge both datasets together by movie name and release year. In the end, we extract key people in the movie (e.g., actors and actresses, director, and producer) in order to retrieve their quotations from the ```Quotebank``` database. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies.
 
 [^imdb-database]: [IMDb datasets](https://datasets.imdbws.com)
 [^mojo-database]: [Box Office Mojo datasets](https://www.boxofficemojo.com/year/2015/)
@@ -72,10 +72,10 @@ We code the box office revenue in binary (flop = 0, blockbuster = 1). After that
 Project proposal, web scraping all available datasets, initial descriptive analysis
 
 **Week 2** (22 Nov-28 Nov): 
-Feature selection for all variables, compute textual characteristics of quotation (e.g., sentiment polarity, topic classification), compute influential power of speaker, data cleaning and standardized 
+Data cleaning, feature selection for all variables, compute textual characteristics of quotation (e.g., sentiment polarity, topic classification), compute 20 speakers with highest (vs. lowest) number of quotations, data standardized 
 
 **Week 3** (29 Nov-5 Dec):
-Training data to predictive models (e.g., SVM and neural network) with cross validation methods, evaluate the model performance 
+Training data to predictive models (e.g., logistic regression, SVM) with cross validation methods, evaluate the model performance 
 
 **Week 4** (6 Dec-12 Dec):
 Wrap up results, visualize data and write data story down
