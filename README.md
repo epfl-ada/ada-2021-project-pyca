@@ -41,8 +41,6 @@ The second, ```Box Office Mojo```, displayed the financial performance of movies
 
 After that, we merge both datasets together by movie name and release year. Further we extract key people in the movie (e.g., actors and actresses, director, and producer) in order to retrieve their quotations from the Quotebank database. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies.
 
-To understand the influence of quotations on box-office receipts, it is important to examine the **depth and size** (the quantity of movie associated person quotations before and after the release date of movie), the **breadth** (the number of movie associated persons involved in the quotations over time), the **dynamics of content in quotations** (e.g., the change of sentiment polarity in quotation over time, variations in topical categories of quotation) and **influential power of speaker** in the cast (the actor/actress/director's past revenue, the uniqueness/familiarity of pair in movie casting, etc).
-
 [^imdb-database]: [IMDb datasets](https://datasets.imdbws.com)
 [^mojo-database]: [Box Office Mojo datasets](https://www.boxofficemojo.com/year/2015/)
 
