@@ -55,6 +55,9 @@ In our study, we combine the Quotebank database with the IMDb movie information 
 TO DO: More details here, combination of machine learning and statistical modeling
 <span style="color:blue">I would be more precise here and start with really basic analysis (realistic)</span>
 
+**box office receipts and quotations** In our preliminary analysis, we plot change of quantity in main crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
+
+
 1. Sentiment Analysis
 
 2. Topical categories of quotations
@@ -93,7 +96,7 @@ Double check code and prepare the final storytelling about our data results
 * [Pierre] (https://github.com/pgimalac): develop algorithm, feature engineering, model selection
 * [Yiming] (https://github.com/yiming-li3008): analyze quotation text using NLP methods, write project data story
 
-## Note to repository
+## Organisation of the repository
     .
     ├── moviePreprocessing
     │   ├── movieDataSetBuilder.ipynb #pre-process and merge IMDb movie and box-office revenue datasets
@@ -103,7 +106,6 @@ Double check code and prepare the final storytelling about our data results
     ├── analysis
     │   └── analysis_quote.ipynb #prelimilary analysis for correlation between main crew quotations and box office receipts 
     
-Note: All datasets with quotations in the year 2015-2020 can be found via the google drive here: 
-
-https://drive.google.com/drive/folders/1q0zKAa45PFMZUMzclg4tjHwOMBS6QptM?usp=sharing
+**Note:** All datasets with quotations whose speaker is in the main crew of a 2015-2020 movie can be found via the google drive here: 
+[google drive link](https://drive.google.com/drive/folders/1q0zKAa45PFMZUMzclg4tjHwOMBS6QptM?usp=sharing)
 
