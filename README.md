@@ -6,7 +6,7 @@ Recent research work has investigated the determinants of attributes (e.g., budg
 [^Early-Predictions-of-Movie-Success]: https://arxiv.org/abs/1506.05382
 [^The-Power-of-Stars]: https://journals.sagepub.com/doi/10.1509/jmkg.71.4.102
 
-However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how the main film crew claims in the media coverage. Not only the fame of a lead actor/director can influence the box office revenue, but also the public claims from the main film crew might shape the audience attitudes and intentions to watch movie. One salient research question in our study is to examine *whether the main film crew's quotations in the press trigger an increase in the box office revenues over time.* We will perform different machine learning methods with cross validation to show what kind of characteristics in the main film crew's quotation might predict the box-office success.
+However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how the main film crew claims in the media coverage. Not only the fame of a lead actor/director can influence the box office revenue, but also the public claims from the main film crew might shape the audience attitudes and intentions to watch movie. One salient research question in our study is to examine *whether the main film crew's quotations in the press trigger an increase in the box office revenues over time.* We will perform different machine learning methods with cross validation to show what kind of characteristics in the main film crew's quotation might forecast the box-office success.
 
 
 ## Introduction
