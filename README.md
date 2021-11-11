@@ -11,10 +11,11 @@ However, an important attribute in forecasting the box-office receipts has remai
 
 ## Introduction
 
-The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^global-box-office-revenue-per-year]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019.
+The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^box-office-revenue-2019]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019[^global-box-office-revenue-per-year].
 
 ![global box office revenue per year by format](./assets/global-box-office-revenue-per-year.png)
 
+[^box-office-revenue-2019]: https://www.billboard.com/articles/news/8547827/2019-global-box-office-revenue-hit-record-425b-despite-4-percent-dip-in-us
 [^global-box-office-revenue-per-year]: https://www.statista.com/statistics/259987/global-box-office-revenue
 
 In recent years, numerous research work has uncovered which attributes might predict the financial success of motion pictures after they were released, and why some movies could be "hits" or "flops" using automation methods[^buzz-recommandation-internet][^blogs-advertising-local-market][^predicting-motion-picture].
@@ -49,6 +50,9 @@ After that, we merge both datasets together by movie name and release year. In t
 **volume of quotations and box office revenue** 
 In our preliminary analysis, we plot change of quantity in the main film crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
 
+![Press Activity](./analysis/quotes_around_release.png)
+![Press Activity](./analysis/gross_vs_occurrences.png)
+
 **Genre difference in the effect of quotes on revenue**
 Further we will examine the effect of the main crew’s quotations on revenue for each genre. We will perform a pair-wise KS statistic heatmap to show whether the genre differs in the main crew’s quotations, and plot the correlation graph between the main crew’s quotations and revenue for each movie category. 
 
@@ -60,10 +64,6 @@ We plan to pre-process text using NLP libraries (spacy, nltk, genism and sklearn
 
 **Model for prediction**
 We code the box office revenue in binary (flop = 0, blockbuster = 1). After that we train our predict models (e.g., logistic regression model, SVM and random forests) with cross-validation for our task. In the end we evaluate the accuracy rate for each predictive model.
-
-
-![Press Activity](./analysis/quotes_around_release.png)
-![Press Activity](./analysis/gross_vs_occurrences.png)
 
 
 ## Project Timeline
