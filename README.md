@@ -70,15 +70,9 @@ Further we will examine the effect of the main crew’s quotations on revenue fo
 **Main crew’s quotation frequency**
 We compute the number of quotation occurrences for each movie related speaker. We consider top 20 speakers who have the highest number of quotation occurrences in the media coverage (vs. 20 lowest speakers). By doing so, we expect to examine whether the main crew who appear more often in the media coverage (vs. who has lowest media exposure) have greater influence on the box office revenue. 
 
+**sentiment analysis and Topic detection**
 
-
-1. Sentiment Analysis
-
-2. Topical categories of quotations
-
-3. Prediction methods (logical regressions, SVM, Random forest, Neural network etc.)
-
-4. Speaker's Influential power calculation (cosine similarity between speakers etc.)
+We plan to pre-process text using NLP libraries (spacy, nltk, genism and sklearn). First, we will detect the sentiment polarity score from quotations with dictionary-based package Afinn. Second, we compute the number of topics for each speaker’s total quotations with LDA method (pyLDAvis from genism).
 
 ![Press Activity](./analysis/quotes_around_release.png)
 ![Press Activity](./analysis/gross_vs_occurrences.png)
