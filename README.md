@@ -68,7 +68,7 @@ In our preliminary analysis, we plot change of quantity in main crew’s quotati
 Further we will examine the effect of the main crew’s quotations on revenue for each genre. We will perform a pair-wise KS statistic heatmap to show whether the genre differs in the main crew’s quotations, and plot the correlation graph between the main crew’s quotations and revenue for each movie category. 
 
 **Main crew’s quotation frequency**
-We compute the number of quotation occurrences for each movie related speaker. We consider top 20 speaker who have appeared the highest number of quotation occurrences in the media coverage (vs. 20 lowest number). By doing so, we expect to examine whether the main crew who appear more often in the media coverage (vs. who has lowest media exposure) greater influence on the box office revenue. 
+We compute the number of quotation occurrences for each movie related speaker. We consider top 20 speaker who have the highest number of quotation occurrences in the media coverage (vs. 20 lowest number). By doing so, we expect to examine whether the main crew who appear more often in the media coverage (vs. who has lowest media exposure) have greater influence on the box office revenue. 
 
 
 
