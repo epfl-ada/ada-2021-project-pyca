@@ -30,18 +30,6 @@ More specifically, we will address the following key questions:
 * *Which textual factors from quotations influence the financial performance of movies, and when (i.e., before or after the release date)?*
 * *Which model (e.g., SVM, Neural Network, etc) has better predictive performance in forecasting the box-office receipts, given the quotations, its spread and the influential power of speaker?*
 
-For the post-release period the 'power of critics' will be measured. This is identified as the ratio of positive to negative quotes attributed to critics. The data of critics are founded in the IMDb database. For sentiment classification, we use a term counting method (as it described in the Kennedy and Inkpen paper[^sentiment-analysis-paper]). That means that if there are more (respectively less) positive than negative terms, the quote is considered positive (respectively negative). We incorporate valence shifters into the term-counting method (e.g., the movie is not good) as well as intensifiers (e.g. very good) or diminishers (barely and good) taken from the general inquirer 'overstatements' and "understatements" database.
-
-[^word-of-mouth-for-movies]: [Word-of-Mouth for Movies: Its Dynamics and Impact on Box Office Revenue](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1949819)
-[^sentiment-analysis-paper]: [Sentiment classification of movie reviews using contextual valence shifters](https://www.cs.utoronto.ca/~akennedy/publications/sentiment_ci_2006.pdf)
-
-The second aim of the study is to explain box office revenue in a dynamic way (see Liu[^word-of-mouth-for-movies] for a similar model). We hypothesize that the change of post release volume and the sentiment of the quotes after the release of the movie have an impact in the subsequent box office. The ratio of first week revenue to the total aggregate revenue is used to find the changes of the opinion after the first week of the release.
-
-Consequently, our suggesting key factors that affect the box-office revenue of a movie, are:
-1. The publicity volume before the release and during the first week
-2. The popularity of the speaker and the sentiment of the quote
-3. The power of the critics after the first week
-
 
 ## Dataset Used
 
