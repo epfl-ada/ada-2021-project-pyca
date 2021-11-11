@@ -1,7 +1,7 @@
 # Predicting Box-Office Receipts from the Actors and Director's Quotations
 ## Abstract
 
-Recent research work has investigated the determinants of attributes (budget, actors, etc.) in predicting the box-office revenues. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry [^word-of-mouth-for-movies].
+Recent research work has investigated the determinants of attributes (budget, actors, etc.) in predicting the box-office revenues. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^word-of-mouth-for-movies].
 
 [^word-of-mouth-for-movies]: [Word-of-Mouth for Movies: Its Dynamics and Impact on Box Office Revenue](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1949819)
 
