@@ -75,3 +75,18 @@ Double check code and prepare the final storytelling about our data results
 * [Christos] (https://github.com/Yo-art7): Data visualization, running tests and evaluate model performance
 * [Pierre] (https://github.com/pgimalac): develop algorithm, feature engineering, model selection
 * [Yiming] (https://github.com/yiming-li3008): analyze quotation text using NLP methods, write project data story
+
+## Note to repository
+    .
+    ├── moviePreprocessing
+    │   ├── movieDataSetBuilder.ipynb #pre-process and merge IMDb movie and box-office revenue datasets
+    │   └── movie_data_2015_2020.csv #movie dataset: 2015-2020
+    ├── mergeDataSets 
+    │   └── link_quotes_to_movies.ipynb #merge quotabank and movie dataset by main crew names 
+    ├── analysis
+    │   └── analysis_quote.ipynb #prelimilary analysis for correlation between main crew quotations and box office receipts 
+    
+Note: All datasets with quotations in the year 2015-2020 can be found via the google drive here: 
+
+https://drive.google.com/drive/folders/1q0zKAa45PFMZUMzclg4tjHwOMBS6QptM?usp=sharing
+
