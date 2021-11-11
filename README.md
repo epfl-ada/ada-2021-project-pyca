@@ -47,7 +47,7 @@ After that, we merge both datasets together by movie name and release year. In t
 
 ## Methods
 
-**volume of quotations and box office revenue** 
+**Volume of quotations and box office revenue** 
 In our preliminary analysis, we plot change of quantity in the main film crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
 
 ![Press Activity](./analysis/quotes_around_release.png)
@@ -59,7 +59,7 @@ Further we will examine the effect of the main crew’s quotations on revenue fo
 **Main crew’s quotation frequency**
 We compute the number of quotation occurrences for each movie related speaker. We consider top 20 speakers who have the highest number of quotation occurrences in the media coverage (vs. 20 lowest speakers). By doing so, we expect to examine whether the main crew who appear more often in the media coverage (vs. who has lowest media exposure) have greater influence on the box office revenue. 
 
-**sentiment analysis and Topic detection**
+**Sentiment analysis and topic detection**
 We plan to pre-process text using NLP libraries (spacy, nltk, genism and sklearn). First, we will detect the sentiment polarity score from quotations with dictionary-based package Afinn. Second, we compute the number of topics for each speaker’s total quotations with LDA method (pyLDAvis from genism).
 
 **Model for prediction**
