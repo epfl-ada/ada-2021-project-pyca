@@ -15,6 +15,22 @@ The motion pictures industry has become a roaring success that breaks records of
 * *Which textual factors from quotations influence the financial performance of movies, and when (i.e., before or after the release date)?*
 * *Which model (e.g., SVM and Neural Network) has better predictive performance in forcasting the box-office receipts, given the spreading and content of quotations and influential power of speaker?*
 
+(Christos, we can add some of the folowing..
+
+For the post release period the ‘power of critics’ will be measured. This is identified as the ratio of positive to negative quotes attributed to critics. The data of critics are founded in the imdb database. For sentiment classification, we use a term counting method (as it described in Kennedy and Inkpen paper). That means that if there are more positive than negative terms, the quote is considered positive and vice versa. We incorporate valence shifters into the term-counting method (e.g., the movie is not good) as well as intensifiers (e.g. very good) or diminishers (barely and good) taken from the general inquirer ‘overstatements’ and “understatements” database.
+
+The second aim of the study is to explain box office revenue in a dynamic way (see Liu for a similar model). We hypothesize that the change of post release volume and the sentiment of the quotes after the release of the movie have an impact in the subsequent box office (the ratio of first week revenue to aggregate revenue). That means that means that the opinion of the changes after the first week of the release.
+
+Consequently, our susgesting key factors that affect the box-office revenue of a movie, are:
+1)The publicity volume before the release and during the first week
+2)The popularity of the speaker and the sentiment of the quote
+3)The power of the critics after the first week
+
+References:
+https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8640.2006.00277.x
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1949819
+
+)
 
 
 ## Dataset Used
