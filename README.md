@@ -73,6 +73,10 @@ We compute the number of quotation occurrences for each movie related speaker. W
 **sentiment analysis and Topic detection**
 We plan to pre-process text using NLP libraries (spacy, nltk, genism and sklearn). First, we will detect the sentiment polarity score from quotations with dictionary-based package Afinn. Second, we compute the number of topics for each speaker’s total quotations with LDA method (pyLDAvis from genism).
 
+**Model for prediction**
+We code the box office revenue in binary (flop = 0, blockbuster = 1). After that we train our predict models (e.g., logistic regression model, SVM and random forests) with cross-validation for our task. In the end we evaluate the accuracy rate for each predictive model.
+
+
 ![Press Activity](./analysis/quotes_around_release.png)
 ![Press Activity](./analysis/gross_vs_occurrences.png)
 
