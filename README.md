@@ -1,4 +1,4 @@
-# Predicting Box-Office Receipts from the main film crew's Quotations
+# Predicting Box-Office Receipts from the Main Film Crew's Quotations
 ## Abstract
 
 Recent research work has investigated the determinants of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
@@ -26,9 +26,9 @@ In recent years, numerous research work has uncovered which attributes might pre
 In our study, we explore the important role of the claims from the main film crew on predicting the financial success of box-office receipts in 2015-2019 from the longitudinal time sequence (i.e., before and after the release date).
 More specifically, we will address the following key questions:
 
-* *Does the quantity of quotations from movie associated persons provide a boost to box-office revenue?*
-* *Which textual factors from quotations influence the financial performance of movies, and when (i.e., before or after the release date)?*
-* *Which model (e.g., logistic regression, SVM) has better predictive performance in forecasting the box-office receipts, given the quotations, its spread and the influential power of speaker?*
+* *Does the quantity of quotations from the main film crew provide a boost to box-office revenue?*
+* *Which textual factors (e.g., sentiment polarity, the number of topics) from quotations might influence the financial performance of movies?*
+* *Which model (e.g., logistic regression, SVM) has better predictive performance in forecasting the box-office receipts?*
 
 ## Dataset Used
 
