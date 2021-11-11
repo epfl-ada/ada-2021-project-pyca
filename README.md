@@ -45,6 +45,9 @@ In our study, we combine the Quotebank database with the IMDb movie information 
 TO DO: More details here, combination of machine learning and statistical modeling
 <span style="color:blue">I would be more precise here and start with really basic analysis (realistic)</span>
 
+**box office receipts and quotations** In our preliminary analysis, we plot change of quantity in main crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
+
+
 1. Sentiment Analysis
 
 2. Topical categories of quotations
