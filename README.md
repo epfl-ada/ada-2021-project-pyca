@@ -1,4 +1,4 @@
-# Predicting Box-Office Receipts from the Actors and Director's Quotations
+# Predicting Box-Office Receipts from the main film crew's Quotations
 ## Abstract
 
 Recent research work has investigated the determinants of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
@@ -6,16 +6,14 @@ Recent research work has investigated the determinants of attributes (e.g., budg
 [^Early-Predictions-of-Movie-Success]: https://arxiv.org/abs/1506.05382
 [^The-Power-of-Stars]: https://journals.sagepub.com/doi/10.1509/jmkg.71.4.102
 
-
-However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how the movie main actors and director claim in the press.
-Not only the fame of a lead actor can influence the box office revenue, but also the his public claims might shape the audience attitudes and intentions to watch movie. One salient research question in our study is to examine whether the director or a main actor's quotations in the press trigger an increase in the box office revenues over time.
+However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how the main film crew claim in the media coverage. Not only the fame of a lead actor/director can influence the box office revenue, but also the public claims from the main film crew might shape the audience attitudes and intentions to watch movie. One salient research question in our study is to examine whether the main film crew's quotations in the press trigger an increase in the box office revenues over time.
 
 We will perform various machine learning analysis using cross validation method to show what kind of characteristics in the director or a lead actor's quotation might be related to the box-office success.
 
 
 ## Introduction
 
-The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^global-box-office-revenue-per-year]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars between the year of 2015-2019.
+The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^global-box-office-revenue-per-year]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019.
 
 ![global box office revenue per year by format](./assets/global-box-office-revenue-per-year.png)
 
@@ -27,13 +25,12 @@ In recent years, numerous research work has uncovered which attributes might pre
 [^blogs-advertising-local-market]: [Blogs, Advertising, and Local-Market Movie Box Office Performance](https://doi.org/10.1287/mnsc.2013.1732)
 [^predicting-motion-picture]: [Predicting box-office success of motion pictures with neural networks](https://doi.org/10.1016/j.eswa.2005.07.018)
 
-In our study, we explore the important role of word of mouth on predicting the financial success of box-office receipts in 2015-2019 from the longitudinal time sequence (i.e., before and after the release date).
+In our study, we explore the important role of the claims from the main film crew on predicting the financial success of box-office receipts in 2015-2019 from the longitudinal time sequence (i.e., before and after the release date).
 More specifically, we will address the following key questions:
 
 * *Does the quantity of quotations from movie associated persons provide a boost to box-office revenue?*
 * *Which textual factors from quotations influence the financial performance of movies, and when (i.e., before or after the release date)?*
-* *Which model (e.g., SVM, Neural Network, etc) has better predictive performance in forecasting the box-office receipts, given the quotations, its spread and the influential power of speaker?*
-
+* *Which model (e.g., logistic regression, SVM) has better predictive performance in forecasting the box-office receipts, given the quotations, its spread and the influential power of speaker?*
 
 ## Dataset Used
 
@@ -43,7 +40,7 @@ The first, ```IMDb movie database```, contains six types of movie data: (*i*) mo
 
 The second, ```Box Office Mojo```, displayed the financial performance of movies in: (*i*) the gross revenue (in U.S. dollars, the average revenue??); (*ii*) ranking of box-office receipts; (*iii*) total gross revenue (???); (*iv*) release date and year.
 
-After that, we merge both datasets together by movie name and release year. Further we extract key people in the movie (e.g., actors and actresses, director, and producer) in order to retrieve their quotations from the Quotebank database. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies.
+After that, we merge both datasets together by movie name and release year. Further we extract key people in the movie (e.g., actors and actresses, director, and producer) in order to retrieve their quotations from the ```Quotebank``` database. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies.
 
 [^imdb-database]: [IMDb datasets](https://datasets.imdbws.com)
 [^mojo-database]: [Box Office Mojo datasets](https://www.boxofficemojo.com/year/2015/)
