@@ -61,7 +61,15 @@ To understand the influence of quotations on box-office receipts, it is importan
 
 ## Methods
 
-**box office receipts and quotations** In our preliminary analysis, we plot change of quantity in main crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
+**box office receipts and quotations** 
+In our preliminary analysis, we plot change of quantity in main crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
+
+**Genre difference in the effect of quotes on revenue**
+Further we will examine the effect of the main crew’s quotations on revenue for each genre. We will perform a pair-wise KS statistic heatmap to show whether the genre differs in the main crew’s quotations, and plot the correlation graph between the main crew’s quotations and revenue for each movie category. 
+
+**Main crew’s quotation frequency**
+We compute the number of quotation occurrences for each movie related speaker. We consider top 20 speaker who have appeared the highest number of quotation occurrences in the media coverage (vs. 20 lowest number). By doing so, we expect to examine whether the main crew who appear more often in the media coverage (vs. who has lowest media exposure) greater influence on the box office revenue. 
+
 
 
 1. Sentiment Analysis
