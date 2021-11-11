@@ -1,7 +1,11 @@
 # Predicting Box-Office Receipts from the Actors and Director's Quotations
 ## Abstract
 
-Recent research work has investigated the determinants of attributes (budget, actors, etc.) in predicting the box-office revenues. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^word-of-mouth-for-movies].
+Recent research work has investigated the determinants of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
+
+[^Early-Predictions-of-Movie-Success]: https://arxiv.org/abs/1506.05382
+[^The-Power-of-Stars]: https://journals.sagepub.com/doi/10.1509/jmkg.71.4.102
+
 
 However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how the movie main actors and director claim in the press.
 Not only the fame of a lead actor can influence the box office revenue, but also the his public claims might shape the audience attitudes and intentions to watch movie. One salient research question in our study is to examine whether the director or a main actor's quotations in the press trigger an increase in the box office revenues over time.
