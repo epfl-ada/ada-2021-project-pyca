@@ -1,7 +1,14 @@
-# Predicting Box-Office Receipts from Casting Star's Quotations
+# Predicting Box-Office Receipts from the Actors and Director's Quotations
 ## Abstract
 
-Recent research work has investigated the determinant of attributes (Budget, stars etc.) in predicting the box-office revenues. Particularly, casting star have been considered as one of critical drivers for the success in the motion pictures industry. However, an important attribute of casting stars in forecasting the box-office receipts has remained mostly unnoticed: what and how the movie casting star claims in the press. It is important to understand whether and how the casting star’s quotations impact the box office success. Not only the familiarity of a casting star can influence the box office revenue, but also the casting star’s public claims might shape audiences’ attitudes and intentions to watch the certain movie. One salient research question in our study is to examine whether a casting star’s quotations in the press trigger an increase in the box office revenues over time. We also perform different machine learning models using cross validation method to show, what kind of content characteristics in casting star’s quotation might be related to the success in box office.
+Recent research work has investigated the determinants of attributes (budget, actors, etc.) in predicting the box-office revenues. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^word-of-mouth-for-movies].
+
+[^word-of-mouth-for-movies]: [Word-of-Mouth for Movies: Its Dynamics and Impact on Box Office Revenue](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1949819)
+
+However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how the movie main actors and director claim in the press.
+Not only the fame of a lead actor can influence the box office revenue, but also the his public claims might shape the audience attitudes and intentions to watch movie. One salient research question in our study is to examine whether the director or a main actor's quotations in the press trigger an increase in the box office revenues over time.
+
+We will perform various machine learning analysis using cross validation method to show what kind of characteristics in the director or a lead actor's quotation might be related to the box-office success.
 
 
 ## Introduction
@@ -14,7 +21,7 @@ The motion pictures industry has become a roaring success that breaks records of
 
 In our study, we combine the Quotebank database with the IMDb movie information dataset and box-office receipts from box office mojo. The first dataset of IMDb movie database contains six types of movie data: (*i*) movie name title; (*ii*) the genre of movie, such as comedy, fantasy category; (*iii*) the release year (we select the movies in the year 2015-2019); (*iv*) region (focus on U.S. and U.K.); (*v*) runtime (in minutes). The second dataset from box office mojo displayed the financial performance of movies in: (*i*) the gross revenue (in U.S. dollars, the average revenue??); (*ii*) ranking of box-office receipts; (*iii*) total gross revenue (???); (*iv*) release date and year. After that, we merge both IMDb movie and box-office receipts datasets together by movie name and release year. Further we extract key persons in the movie (e.g., actor or actress of casting, director, and producer) in order to retrieve their quotations from the Quotebank database. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies. To understand the influence of quotations on box-office receipts, it is important to examine the **depth and size** (the quantity of movie associated person quotations before and after the release date of movie), the **breadth** (the number of movie associated persons involved in the quotations over time), the **dynamics of content in quotations** (e.g., the change of sentiment polarity in quotation over time, variations in topical categories of quotation) and **influential power of speaker** in the cast (the actor/actress/director's past revenue, the uniqueness/familiarity of pair in movie casting etc.)
 
-For the post release period the ‘power of critics’ will be measured. This is identified as the ratio of positive to negative quotes attributed to critics. The data of critics are founded in the IMDb database. For sentiment classification, we use a term counting method (as it described in Kennedy and Inkpen paper). That means that if there are more positive than negative terms, the quote is considered positive and vice versa. We incorporate valence shifters into the term-counting method (e.g., the movie is not good) as well as intensifiers (e.g. very good) or diminishers (barely and good) taken from the general inquirer ‘overstatements’ and “understatements” database.
+For the post release period the 'power of critics' will be measured. This is identified as the ratio of positive to negative quotes attributed to critics. The data of critics are founded in the IMDb database. For sentiment classification, we use a term counting method (as it described in Kennedy and Inkpen paper). That means that if there are more positive than negative terms, the quote is considered positive and vice versa. We incorporate valence shifters into the term-counting method (e.g., the movie is not good) as well as intensifiers (e.g. very good) or diminishers (barely and good) taken from the general inquirer 'overstatements' and “understatements” database.
 
 The second aim of the study is to explain box office revenue in a dynamic way (see Liu for a similar model). We hypothesize that the change of post release volume and the sentiment of the quotes after the release of the movie have an impact in the subsequent box office (the ratio of first week revenue to aggregate revenue). That means that means that the opinion of the changes after the first week of the release.
 
@@ -75,3 +82,18 @@ Double check code and prepare the final storytelling about our data results
 * [Christos] (https://github.com/Yo-art7): Data visualization, running tests and evaluate model performance
 * [Pierre] (https://github.com/pgimalac): develop algorithm, feature engineering, model selection
 * [Yiming] (https://github.com/yiming-li3008): analyze quotation text using NLP methods, write project data story
+
+## Note to repository
+    .
+    ├── moviePreprocessing
+    │   ├── movieDataSetBuilder.ipynb #pre-process and merge IMDb movie and box-office revenue datasets
+    │   └── movie_data_2015_2020.csv #movie dataset: 2015-2020
+    ├── mergeDataSets 
+    │   └── link_quotes_to_movies.ipynb #merge quotabank and movie dataset by main crew names 
+    ├── analysis
+    │   └── analysis_quote.ipynb #prelimilary analysis for correlation between main crew quotations and box office receipts 
+    
+Note: All datasets with quotations in the year 2015-2020 can be found via the google drive here: 
+
+https://drive.google.com/drive/folders/1q0zKAa45PFMZUMzclg4tjHwOMBS6QptM?usp=sharing
+
