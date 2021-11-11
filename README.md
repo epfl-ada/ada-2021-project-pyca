@@ -47,8 +47,8 @@ TO DO: More details here, combination of machine learning and statistical modeli
 4. Speaker's Influential power calculation (cosine similarity between speakers etc.)
 
 <span style="color:blue">Talk briefly about preliminary results?</span>
-![Press Activity](../analysis/quotes_around_release.png)
-![Press Activity](../analysis/gross_vs_occurrences.png)
+![Press Activity](./analysis/quotes_around_release.png)
+![Press Activity](./analysis/gross_vs_occurrences.png)
 
 
 ## Project Timeline
