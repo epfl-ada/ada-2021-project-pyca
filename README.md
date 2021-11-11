@@ -62,7 +62,7 @@ To understand the influence of quotations on box-office receipts, it is importan
 ## Methods
 
 **box office receipts and quotations** 
-In our preliminary analysis, we plot change of quantity in main crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant). 
+In our preliminary analysis, we plot change of quantity in main crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the Spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant).
 
 **Genre difference in the effect of quotes on revenue**
 Further we will examine the effect of the main crew’s quotations on revenue for each genre. We will perform a pair-wise KS statistic heatmap to show whether the genre differs in the main crew’s quotations, and plot the correlation graph between the main crew’s quotations and revenue for each movie category. 
@@ -109,8 +109,8 @@ Double check code and prepare the final storytelling about our data results
     │   └── movie_data_2015_2020.csv #movie dataset: 2015-2020
     ├── mergeDataSets 
     │   └── link_quotes_to_movies.ipynb #merge quotabank and movie dataset by main crew names 
-    ├── analysis
-    │   └── analysis_quote.ipynb #prelimilary analysis for correlation between main crew quotations and box office receipts 
+    └── analysis
+        └── analysis_quote.ipynb #prelimilary analysis for correlation between main crew quotations and box office receipts
     
 **Note:** All datasets with quotations whose speaker is in the main crew of a 2015-2020 movie can be found on [this google drive](https://drive.google.com/drive/folders/1q0zKAa45PFMZUMzclg4tjHwOMBS6QptM?usp=sharing).
 
