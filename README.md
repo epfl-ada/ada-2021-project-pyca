@@ -159,7 +159,7 @@ The `title.{name}.tsv.gz` and `name.basics.tsv.gz` datasets come from the ```IMD
 
 The `movieDataSetBuilder.ipynb` notebook merges the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database], to generate the `movie_data_2015_2020.csv` dataset containing all wanted information about a movie, including its box office results.
 
-The `linkQuotesToMovies.ipynb` notebook filters the ```Quotebank``` database[^quotebank-database] to only keep the quotes whose author appear in the previously generated `movie_data_2015_2020.csv`, and generates `movie_{year}_crew_quotes.csv.gz` datasets.
+The `linkQuotesToMovies.ipynb` notebook filters the ```Quotebank``` database[^quotebank-database] to only keep the quotes whose speaker appears in the previously generated `movie_data_2015_2020.csv`, and generates `movie_{year}_crew_quotes.csv.gz` datasets.
 
 **Note:** All `movie_{year}_crew_quotes.csv.gz` datasets (with quotes whose speaker is in the main crew of a 2015-2020 movie) can be found on [this google drive](https://drive.google.com/drive/folders/1q0zKAa45PFMZUMzclg4tjHwOMBS6QptM?usp=sharing) to avoid running the notebooks (which takes one hour).
 
