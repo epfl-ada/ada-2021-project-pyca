@@ -31,36 +31,38 @@ More specifically, we will address the following key questions:
 * *Which textual factors (e.g., sentiment polarity, the number of topics) from quotations might influence the financial performance of movies?*
 * *Which model (e.g., logistic regression, SVM) has better predictive performance in forecasting the box-office receipts?*
 
+
 ## Dataset Used
 
-In our study, we combine the Quotebank database with the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database].
+In our study, we combine the ```Quotebank``` database with the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database].
 
 Firstly, ```IMDb movie database```, contains six types of movie data: (*i*) movie name title; (*ii*) the genre of movie, such as comedy, fantasy category; (*iii*) the release year (we select the movies in the year 2015-2019); (*iv*) region (focus on U.S. and U.K.); (*v*) runtime (in minutes).
 
 Second, ```Box Office Mojo```, displayed the financial performance of movies in: (*i*) the gross revenue (in U.S. dollars); (*ii*) ranking of box-office receipts; (*iii*) total gross revenue (in U.S. dollars); (*iv*) release date and year.
 
-After that, we merge both datasets together by movie name and release year. In the end, we extract key people in the movie (e.g., actors and actresses, director, and producer) in order to retrieve their quotations from the ```Quotebank``` database. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies.
+After that, we merge both datasets together by movie name and release year. In the end, we extract key people in the movie (e.g., actors and actresses, director, and producer) in order to retrieve their quotations from the ```Quotebank``` database[^quotebank-database]. By doing so, we assume that the spreading of quotation from movie associated key figure might influence the financial performance of the movies.
 
 [^imdb-database]: [IMDb datasets](https://datasets.imdbws.com)
 [^mojo-database]: [Box Office Mojo datasets](https://www.boxofficemojo.com/year/2015/)
+[^quotebank-database]: [QuoteBank datasets](https://zenodo.org/record/4277311)
 
 
 ## Methods
 
 **Volume of quotations and box office revenue**
-In our preliminary analysis, we plot change of quantity in the main film crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant).
+In our preliminary analysis, we plot change of quantity in the main film crew’s quotations around the release date. There is a peak in the main crew’s quotations in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the Spearman correlation graph shows, box office revenue and main crew’s quotations seem to follow some sort of power law (it is positive significant).
 
 ![Press Activity](./analysis/quotes_around_release.png)
 ![Press Activity](./analysis/gross_vs_occurrences.png)
 
 **Genre difference in the effect of quotes on revenue**
-Further we will examine the effect of the main crew’s quotations on revenue for each genre. We will perform a pair-wise KS statistic heatmap to show whether the genre differs in the main crew’s quotations, and plot the correlation graph between the main crew’s quotations and revenue for each movie category. 
+Further we will examine the effect of the main crew’s quotations on revenue for each genre. We will perform a pair-wise KS statistic heat map to show whether the genre differs in the main crew’s quotations, and plot the correlation graph between the main crew’s quotations and revenue for each movie category.
 
 **Main crew’s quotation frequency**
 We compute the number of quotation occurrences for each movie related speaker. We consider top 20 speakers who have the highest number of quotation occurrences in the media coverage (vs. 20 lowest speakers). By doing so, we expect to examine whether the main crew who appear more often in the media coverage (vs. who has lowest media exposure) have greater influence on the box office revenue. 
 
 **Sentiment analysis and topic detection**
-We plan to pre-process text using NLP libraries (spacy, nltk, genism and sklearn). First, we will detect the sentiment polarity score from quotations with dictionary-based package Afinn. Second, we compute the number of topics for each speaker’s total quotations with LDA method (pyLDAvis from genism).
+We plan to pre-process text using NLP libraries (`spacy`, `nltk`, `genism` and `sklearn`). First, we will detect the sentiment polarity score from quotations with dictionary-based package `Afinn`. Second, we compute the number of topics for each speaker’s total quotations with LDA method (`pyLDAvis` from `genism`).
 
 **Model for prediction**
 We code the box office revenue in binary (flop = 0, blockbuster = 1). After that we train our predict models (e.g., logistic regression model, SVM and random forests) with cross-validation for our task. In the end we evaluate the accuracy rate for each predictive model.
@@ -69,37 +71,89 @@ We code the box office revenue in binary (flop = 0, blockbuster = 1). After that
 ## Project Timeline
 
 **Week 1** (8 Nov-14 Nov): 
-Project proposal, web scraping all available datasets, initial descriptive analysis
+Project proposal, web scraping all available datasets, initial descriptive analysis.
 
 **Week 2** (22 Nov-28 Nov): 
-Data cleaning, feature selection for all variables, compute textual characteristics of quotation (e.g., sentiment polarity, topic classification), compute 20 speakers with highest (vs. lowest) number of quotations, data standardized
+Data cleaning, feature selection for all variables, compute textual characteristics of quotation (e.g., sentiment polarity, topic classification), compute 20 speakers with highest (vs. lowest) number of quotations, data standardized.
 
 **Week 3** (29 Nov-5 Dec):
-Training data to predictive models (e.g., logistic regression, SVM) with cross validation methods, evaluate the model performance
+Training data to predictive models (e.g., logistic regression, SVM) with cross validation methods, evaluate the model performance.
 
 **Week 4** (6 Dec-12 Dec):
-Wrap up results, visualize data and write data story down
+Wrap up results, visualize data and write down data stories.
 
 **Week 5** (13 Dec-17 Dec): 
-Double check code and prepare the final storytelling about our data results 
+Double check code and prepare the final storytelling about our data results.
 
 
 ## Organization within the team
 
-* [Alex](https://github.com/PhotonAmpere): web scraping for datasets, initial data analysis, pre-process datasets, develop algorithm, model selection
-* [Christos](https://github.com/Yo-art7): Data visualization, running tests and evaluate model performance
-* [Pierre](https://github.com/pgimalac): develop algorithm, feature engineering, model selection
-* [Yiming](https://github.com/yiming-li3008): analyze quotation text using NLP methods, write project data story
+* [Alex](https://github.com/PhotonAmpere): Web scraping datasets, initial data analysis, pre-process datasets, develop algorithm, model selection
+* [Christos](https://github.com/Yo-art7): Data visualization, running tests, evaluate model performance
+* [Pierre](https://github.com/pgimalac): Develop algorithm, feature engineering, model selection
+* [Yiming](https://github.com/yiming-li3008): Analyze quotation text using NLP methods, write project data story
+
 
 ## Organization of the repository
-    .
-    ├── moviePreprocessing
-    │   ├── movieDataSetBuilder.ipynb #pre-process and merge IMDb movie and box-office revenue datasets
-    │   └── movie_data_2015_2020.csv #movie dataset: 2015-2020
-    ├── mergeDataSets 
-    │   └── link_quotes_to_movies.ipynb #merge quotabank and movie dataset by main crew names 
-    └── analysis
-        └── analysis_quote.ipynb #prelimilary analysis for correlation between main crew quotations and box office receipts
-    
-**Note:** All datasets with quotations whose speaker is in the main crew of a 2015-2020 movie can be found on [this google drive](https://drive.google.com/drive/folders/1q0zKAa45PFMZUMzclg4tjHwOMBS6QptM?usp=sharing).
+### Project hierarchy
 
+```
+ .
+ ├── moviePreprocessing/
+ │   └── movieDataSetBuilder.ipynb
+ │
+ ├── mergeDataSets/
+ │   └── linkQuotesToMovies.ipynb
+ │
+ ├── analysis/
+ │   └── analysisQuote.ipynb
+ │
+ └── data/
+     │   # Generated by `movieDataSetBuilder.ipynb`
+     ├── movie_data_2015_2020.csv
+     │
+     │   # Downloaded from `QuoteBank`
+     ├── quotes-2015.json.bz2
+     ├── quotes-2016.json.bz2
+     ├── quotes-2017.json.bz2
+     ├── quotes-2018.json.bz2
+     ├── quotes-2019.json.bz2
+     ├── quotes-2020.json.bz2
+     │
+     │   # Downloaded from `IMDb`
+     ├── name.basics.tsv.gz
+     ├── title.akas.tsv.gz
+     ├── title.basics.tsv.gz
+     ├── title.crew.tsv.gz
+     ├── title.episode.tsv.gz
+     ├── title.principals.tsv.gz
+     ├── title.ratings.tsv.gz
+     │
+     │   # Generated by `linkQuotesToMovies.ipynb`
+     ├── movie_2015_crew_quotes.csv.gz
+     ├── movie_2016_crew_quotes.csv.gz
+     ├── movie_2017_crew_quotes.csv.gz
+     ├── movie_2019_crew_quotes.csv.gz
+     ├── movie_2018_crew_quotes.csv.gz
+     └── movie_2020_crew_quotes.csv.gz
+```
+
+### Pre-existing datasets
+
+The `quotes-{year}.json.bz2` datasets come from the ```Quotebank``` database[^quotebank-database].
+
+The `title.{name}.tsv.gz` and `name.basics.tsv.gz` datasets come from the ```IMDb movie information database``` [^imdb-database].
+
+
+### Creation of our own datasets
+
+The `movieDataSetBuilder.ipynb` notebook merges the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database], to generate the `movie_data_2015_2020.csv` dataset containing all wanted information about a movie, including its box office results.
+
+The `linkQuotesToMovies.ipynb` notebook filters the ```Quotebank``` database[^quotebank-database] to only keep the quotes whose author appear in the previously generated `movie_data_2015_2020.csv`, and generates `movie_{year}_crew_quotes.csv.gz` datasets.
+
+**Note:** All `movie_{year}_crew_quotes.csv.gz` datasets (with quotes whose speaker is in the main crew of a 2015-2020 movie) can be found on [this google drive](https://drive.google.com/drive/folders/1q0zKAa45PFMZUMzclg4tjHwOMBS6QptM?usp=sharing) to avoid running the notebooks (which takes one hour).
+
+
+### Analysis
+
+The `analysisQuote.ipynb` notebook contains our analysis so far, it already reveal a few interesting correlations and produces some nice artifacts.
