@@ -1,12 +1,14 @@
 # Predicting Box-Office Receipts from the Main Film Crew's quotes
 ## Abstract
 
-Recent research work has investigated the determinants of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
+Recent research work has investigated the impact of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
 
 [^Early-Predictions-of-Movie-Success]: https://arxiv.org/abs/1506.05382
 [^The-Power-of-Stars]: https://journals.sagepub.com/doi/10.1509/jmkg.71.4.102
 
-However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how the main film crew claims in the media coverage. Not only the fame of a lead actor/director can influence the box office revenue, but also the public claims from the main film crew might shape the audience attitudes and intentions to watch movie. One salient research question in our study is to examine *whether the main film crew's quotes in the press trigger an increase in the box office revenues over time.* We will perform different machine learning methods with cross validation to show what kind of characteristics in the main film crew's quotes might forecast the box-office success.
+However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how the main film crew claims in the media coverage. Not only does the fame of a lead actor/director can influence the box office revenue, but also the public claims from the main film crew might shape the audience attitude and intentions to watch movie.
+
+One salient research question in our study is to examine *whether the main film crew's quotes in the press trigger an increase in the box office revenues over time.* We will perform different machine learning methods with cross validation to show what kind of characteristics in the main film crew's quotes might forecast the box-office results.
 
 
 ## Introduction
@@ -14,6 +16,7 @@ However, an important attribute in forecasting the box-office receipts has remai
 The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^box-office-revenue-2019]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019[^global-box-office-revenue-per-year].
 
 ![global box office revenue per year by format](./assets/global-box-office-revenue-per-year.png)
+*Global box office revenue per year by format*
 
 [^box-office-revenue-2019]: https://www.billboard.com/articles/news/8547827/2019-global-box-office-revenue-hit-record-425b-despite-4-percent-dip-in-us
 [^global-box-office-revenue-per-year]: https://www.statista.com/statistics/259987/global-box-office-revenue
@@ -27,16 +30,17 @@ In recent years, numerous research work has uncovered which attributes might pre
 In our study, we explore the important role of the claims from the main film crew on predicting the financial success of box-office receipts in 2015-2019 from the longitudinal time sequence (i.e., before and after the release date).
 More specifically, we will address the following key questions:
 
-* *Does the quantity of quotes from the main film crew provide a boost to box-office revenue?*
-* *Which textual factors (e.g., sentiment polarity, the number of topics) from quotes might influence the financial performance of movies?*
-* *Which model (e.g., logistic regression, SVM) has better predictive performance in forecasting the box-office receipts?*
+* *Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?*
+* *How much does the fame of the speaker influence the box-office revenue ?*
+* *Which textual factors (e.g., sentiment polarity, the number of topics) from quotes might influence the financial performance of movies ?*
+* *Which model (e.g., logistic regression, SVM) has better predictive performance in forecasting the box-office receipts ?*
 
 
-## Dataset Used
+## Datasets Used
 
-In our study, we combine the ```Quotebank``` database with the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database].
+In our study, we combine the quotation-centric version of the ```Quotebank``` database[^quotebank-database] with the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database].
 
-Firstly, ```IMDb movie database```, contains six types of movie data: (*i*) movie name title; (*ii*) the genre of movie, such as comedy, fantasy category; (*iii*) the release year (we select the movies in the year 2015-2019); (*iv*) region (focus on U.S. and U.K.); (*v*) runtime (in minutes).
+Firstly, ```IMDb movie database```, contains six types of movie data: (*i*) movie name title; (*ii*) the genre of movie, such as comedy, fantasy category; (*iii*) the release year (we select the movies in the year 2015-2020); (*iv*) region (focus on U.S. and U.K.); (*v*) runtime (in minutes); (*vi*) main people involved in the movie.
 
 Second, ```Box Office Mojo```, displayed the financial performance of movies in: (*i*) the gross revenue (in U.S. dollars); (*ii*) ranking of box-office receipts; (*iii*) total gross revenue (in U.S. dollars); (*iv*) release date and year.
 
@@ -46,26 +50,32 @@ After that, we merge both datasets together by movie name and release year. In t
 [^mojo-database]: [Box Office Mojo datasets](https://www.boxofficemojo.com/year/2015/)
 [^quotebank-database]: [QuoteBank datasets](https://zenodo.org/record/4277311)
 
+**See [movieDataSetBuilder.ipynb](./moviePreprocessing/movieDataSetBuilder.ipynb) and [linkQuotesToMovies.ipynb](./mergeDataSets/linkQuotesToMovies.ipynb) to extract and merge these datasets.**
 
 ## Methods
 
-**Volume of quotes and box office revenue**
+**Volume of quotes and box office revenue :**
 In our preliminary analysis, we plot change of quantity in the main film crew’s quotes around the release date. There is a peak in the main crew’s quotes in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the Spearman correlation graph shows, box office revenue and main crew’s quotes seem to follow some sort of power law (it is positive significant).
 
+Below are some early artifacts produced by our analysis, showing interesting correlations respectively between the number of quotes and the time to the release date, and between the number of quotes and the box office success.
+
 ![Press Activity](./assets/quotes_around_release.png)
+
 ![Press Activity](./assets/gross_vs_occurrences.png)
 
-**Genre difference in the effect of quotes on revenue**
+**See [analysisQuote.ipynb](./analysis/analysisQuote.ipynb) for the preliminary analysis.**
+
+**Genre difference in the effect of quotes on revenue :**
 Further we will examine the effect of the main crew’s quotes on revenue for each genre. We will perform a pair-wise KS statistic heat map to show whether the genre differs in the main crew’s quotes, and plot the correlation graph between the main crew’s quotes and revenue for each movie category.
 
-**Main crew’s quote frequency**
+**Main crew’s quote frequency :**
 We compute the number of quotes for each movie related speaker. We consider top 20 speakers who have the highest number of quotes in the media coverage (vs. 20 lowest speakers). By doing so, we expect to examine whether the main crew who appear more often in the media coverage (vs. who has lowest media exposure) have greater influence on the box office revenue.
 
-**Sentiment analysis and topic detection**
-We plan to pre-process text using NLP libraries (`spacy`, `nltk`, `genism` and `sklearn`). First, we will detect the sentiment polarity score from quotes with dictionary-based package `Afinn`. Second, we compute the number of topics for each speaker’s total quotes with LDA method (`pyLDAvis` from `genism`).
+**Sentiment analysis and topic detection :**
+We plan to pre-process text using NLP libraries (namely `spacy`, `nltk`, `genism` and `sklearn`). First, we will detect the sentiment polarity score from quotes with dictionary-based package `Afinn`. Then, we compute the number of topics for each speaker’s total quotes with LDA method (`pyLDAvis` from `genism`).
 
-**Model for prediction**
-We code the box office revenue in binary (flop = 0, blockbuster = 1). After that we train our predict models (e.g., logistic regression model, SVM and random forests) with cross-validation for our task. In the end we evaluate the accuracy rate for each predictive model.
+**Model for prediction :**
+We code the box office revenue in binary (failure = 0, success = 1). After that we train our predict models (e.g., logistic regression model, SVM and random forests) with cross-validation for our task. In the end we evaluate the accuracy rate for each predictive model.
 
 
 ## Project Timeline
@@ -90,7 +100,7 @@ Double check code and prepare the final storytelling about our data results.
 
 * [Alex](https://github.com/PhotonAmpere): Web scraping datasets, initial data analysis, pre-process datasets, develop algorithm, model selection
 * [Christos](https://github.com/Yo-art7): Data visualization, running tests, evaluate model performance
-* [Pierre](https://github.com/pgimalac): Develop algorithm, feature engineering, model selection
+* [Pierre](https://github.com/pgimalac): Develop algorithm, feature engineering, model selection, code quality
 * [Yiming](https://github.com/yiming-li3008): Analyze quote text using NLP methods, write project data story
 
 
