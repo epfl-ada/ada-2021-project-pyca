@@ -104,7 +104,7 @@ Double check code and prepare the final storytelling about our data results.
 
 ## Organization within the team
 
-* [Alex](https://github.com/PhotonAmpere): Web scraping datasets, initial data analysis, pre-process datasets, develop algorithm, model selection
+* [Alex](https://github.com/PhotonAmpere): Web scraping datasets, initial data analysis, pre-process datasets, data visialization
 * [Christos](https://github.com/Yo-art7): Data visualization, running tests, evaluate model performance
 * [Pierre](https://github.com/pgimalac): Develop algorithm, feature engineering, model selection, code quality
 * [Yiming](https://github.com/yiming-li3008): Analyze quote text using NLP methods, write project data story
