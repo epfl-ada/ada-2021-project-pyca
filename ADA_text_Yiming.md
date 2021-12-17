@@ -6,18 +6,19 @@ Recent research work has investigated the impact of attributes (e.g., budget, re
 
 However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how people talk about movies in the media.
 
-How people talk about a movie in the media is not only an important source from which we can observe a speaker's view about a movie, but also an efficient way to shape others' attitude and intentions to watch movie.
+How people talk about a movie in the media is not only a way to know a speaker's view about a movie, but it will also others and could indicate the eventual success of a movie.
 
-One salient research question in our study is to examine **whether speaking positively about the movie in the media triggers an increase in the box office revenue even after the opening period**. We perform text analysis and statistical testing methods to show which text features from a speaker's quotes might influence the box-office revenue.
+One salient research question in our study is to examine **how the sentiments in the quotes related to a movie influence the box office revenue after the opening period**. We perform text analysis and statistical testing methods to show which text features from a speaker's quotes might influence the box-office revenue.
 
-Our first analysis could not allow for sentiment analysis: the quotes linked to movies were from the movie crew, which induces a bias. We now propose another approach.
+We perform two analysis, the first one is only interested in the quotes from someone related to the movie (actor, director, etc), while the second uses all the quotes that mention the title of the movie, or a related term.
 
 ## Introduction
 
 The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^box-office-revenue-2019]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019[^global-box-office-revenue-per-year].
 
 ![global box office revenue per year by format](./assets/global-box-office-revenue-per-year.png)
-*Global box office revenue per year by format*
+
+*Global box office revenue per year by format, from [^global-box-office-revenue-per-year]*
 
 [^box-office-revenue-2019]: https://www.billboard.com/articles/news/8547827/2019-global-box-office-revenue-hit-record-425b-despite-4-percent-dip-in-us
 [^global-box-office-revenue-per-year]: https://www.statista.com/statistics/259987/global-box-office-revenue
