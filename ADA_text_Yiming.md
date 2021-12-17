@@ -36,14 +36,14 @@ It is more relevant to examine the effectiveness of a speaker's quotes on the bo
 
 In our study, we investigate the following sub-questions:
 
-* *Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?*
-* *How much does the sentiment polarity of movie related quotes influence the total box-office revenue ?* *
+* [*Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?*](#1.-influence-of-the-movie-crew's-quotes)
+* *How much does the sentiment polarity of movie related quotes influence the total box-office revenue ?*
 * *Does speaking positively in media about a movie result in better box office revenue, even after the opening period ?*
 * *Which lexicon term about a movie are more likely to be mentioned when it comes to a movie with high revenue after the opening period ?*
 
-## Preliminary analysis 
+## 1. Influence of the movie crew's quotes
 
-In our preliminary analysis, we plot change of quantity in the main film crew’s quotes around the release date. There is a peak in the main crew’s quotes in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the Spearman correlation graph shows, box office revenue and main crew’s quotes seem to follow some sort of power law (it is positive significant).
+In our preliminary analysis, we plot the amount of quotes authored by the film crew around the release date. There is a peak in the main crew’s quotes in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the Spearman correlation graph shows, box office revenue and main crew’s quotes seem to follow some sort of power law (it is positive significant).
 
 Below are some early artifacts produced by our analysis, showing interesting correlations respectively between the number of quotes and the time to the release date, and between the number of quotes and the box office success.
 
@@ -53,7 +53,7 @@ Below are some early artifacts produced by our analysis, showing interesting cor
 
 **See [analysisQuote.ipynb](./analysis/analysisQuote.ipynb) for the preliminary analysis.**
 
-## Delving deeper into quotebank with sentiment analysis
+## Delving deeper into Quotebank with sentiment analysis
 Our first approach to relate quotes to movies was irrelevant in the context of sentiment analysis since crew member would not speak freely about their movie. In this part we propose a different approach.
 
 ### A first naïve attempt
@@ -96,3 +96,29 @@ words to describe movie that has high revenue proportion in the first week (comp
 ## Conclusion
 
 Our study examines which attribute from voice about movie in media is associated with the box office revenue around the release weeks. The results indicate that, positive voice in the media might result in higher box office revenue over a period of time after the first release week. That means, movies with high revenue after first week (relative to total revenue) are more likely to be associated with more positive words from media. Although we did not take into account of other possible attributes such as casting stars, movie genres for the association with the box office revenue. Our study reveals important finding that, audiences tend to choose movies with more favorable voice from media. Similarly, more hatred words about a movie in media seem more likely to discourage audiences from visiting cinema, even if those movies get big success in the early stage of their life cycle.
+
+## Sources
+In our study, we combine the quotation-centric version of the ```Quotebank``` database[^quotebank-database] with the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database].
+
+### Movies
+Firstly, ```IMDb movie database```, contains six types of movie data: (*i*) movie name title; (*ii*) the genre of movie, such as comedy, fantasy category; (*iii*) the release year (we select the movies in the year 2015-2020); (*iv*) region (focus on U.S. and U.K.); (*v*) runtime (in minutes); (*vi*) main people involved in the movie.
+
+Secondly, ```Box Office Mojo```, displayed the financial performance of movies in: (*i*) the total gross revenue (in U.S. dollars); (*ii*) ranking of box-office receipts; (*iii*) total gross revenue (in U.S. dollars); (*iv*) release date and year; (*v*) opening week gross; (*vi*) opening week gross percentage.
+
+### Quotes
+After that, we merge both datasets together by movie name and release year.
+
+In the end, we extract key people in the movie (e.g., actors and actresses, director, and producer) in order to retrieve their quotes from the ```Quotebank``` database[^quotebank-database]. By doing so, we assume that the spread of a quote from a movie associated key figure might influence the financial performance of the movies.
+
+We also extract, for the top 50 movies in term of box office revenue, all the quotes that mention these movies or a term related to these movies, in the 25 weeks around the release date.
+
+[^imdb-database]: [IMDb datasets](https://datasets.imdbws.com)
+[^mojo-database]: [Box Office Mojo datasets](https://www.boxofficemojo.com/year/)
+[^quotebank-database]: [QuoteBank datasets](https://zenodo.org/record/4277311)
+
+### Source code
+All the code that we wrote to read, combine and analyze datasets is on [https://github.com/epfl-ada/ada-2021-project-pyca/](https://github.com/epfl-ada/ada-2021-project-pyca/).
+
+- The directory `moviePreprocessing` contains the code that reads the original external datasets, cleans them up and re-exports them.
+- The directory `mergeDataSets` contains the code that reads these datasets and merges them, in particular linking the quotes to the movies (both from the crew, and all the ones that mention the movie).
+- The directory `analysis` contains the code that analyzes the merged datasets.
