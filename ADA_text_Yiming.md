@@ -36,7 +36,7 @@ It is more relevant to examine the effectiveness of a speaker's quotes on the bo
 
 In our study, we investigate the following sub-questions:
 
-* [*Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?*](#1.-influence-of-the-movie-crew's-quotes)
+* [*Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?*](#1-influence-of-the-movie-crews-quotes)
 * *How much does the sentiment polarity of movie related quotes influence the total box-office revenue ?*
 * *Does speaking positively in media about a movie result in better box office revenue, even after the opening period ?*
 * *Which lexicon term about a movie are more likely to be mentioned when it comes to a movie with high revenue after the opening period ?*
