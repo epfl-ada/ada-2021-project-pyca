@@ -14,12 +14,13 @@ We perform two analysis, the first one is only interested in the quotes from som
 
 ## Introduction
 
-The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^box-office-revenue-2019]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019[^global-box-office-revenue-per-year].
+The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^box-office-revenue-2019]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019[^us-box-office-revenue-per-year].
 
 ![global box office revenue per year by format](./assets/global-box-office-revenue-per-year.png)
 
 *Global box office revenue per year by format, from [^global-box-office-revenue-per-year]*
 
+[^us-box-office-revenue-per-year]: https://www.boxofficemojo.com/year/
 [^box-office-revenue-2019]: https://www.billboard.com/articles/news/8547827/2019-global-box-office-revenue-hit-record-425b-despite-4-percent-dip-in-us
 [^global-box-office-revenue-per-year]: https://www.statista.com/statistics/259987/global-box-office-revenue
 
@@ -29,13 +30,16 @@ In recent years, numerous research work has uncovered which attributes might pre
 [^blogs-advertising-local-market]: [Blogs, Advertising, and Local-Market Movie Box Office Performance](https://doi.org/10.1287/mnsc.2013.1732)
 [^predicting-motion-picture]: [Predicting box-office success of motion pictures with neural networks](https://doi.org/10.1016/j.eswa.2005.07.018)
 
-We explore the important role of the claims about movies from a speaker's quotes in media, and its effect on influencing audiences' decisions to go to cinema around release dates. Particularly, we are focused on the proportion of opening revenue (revenue in the first week) in the overall box-office revenue, to measure the financial success of movies. It is more relevant to examine the effectiveness of a speaker's quotes on the box office revenue. We expect that how people talk about movies in media will not generate immediate effect on box office revenue in a very short time period (i.e., within one week after release dates). More people are interested in going to cinema after the positive reviews has widely spread over a period of time in public.
+We explore the important role of the quotes related to movies in the media, and its effects on influencing audiences' decision to go to the cinema after its release. In particular, we are focused on the proportion of opening revenue (revenue in the first week) in the overall box-office revenue, to measure the financial success of movies.
+
+It is more relevant to examine the effectiveness of a speaker's quotes on the box office revenue. We expect that how people talk about movies in the media will not generate immediate effect on box office revenue in a very short time period (i.e., within one week after release dates). More people are interested in going to cinema after the positive reviews has widely spread over a period of time in public.
 
 In our study, we investigate the following sub-questions:
 
-* *Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?* *How much does the sentiment polarity of movie related quotes influence the total box-office revenue?* *
-* *Does speaking positive in media about a movie result in better box office revenue, even after the opening period?*
-* *Which lexicon term about a movie are more likely to be mentioned when it comes to a movie with high revenue after the opening period?*
+* *Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?*
+* *How much does the sentiment polarity of movie related quotes influence the total box-office revenue ?* *
+* *Does speaking positively in media about a movie result in better box office revenue, even after the opening period ?*
+* *Which lexicon term about a movie are more likely to be mentioned when it comes to a movie with high revenue after the opening period ?*
 
 ## Preliminary analysis 
 
@@ -51,6 +55,7 @@ Below are some early artifacts produced by our analysis, showing interesting cor
 
 ## Delving deeper into quotebank with sentiment analysis
 Our first approach to relate quotes to movies was irrelevant in the context of sentiment analysis since crew member would not speak freely about their movie. In this part we propose a different approach.
+
 ### A first naïve attempt
 
 We first perform sentiment analysis to explore to what extent sentiment polarity from a speaker's quotation in coverage press affects the financial success of movies. More precisely
@@ -66,7 +71,7 @@ This is not too surprising. For instance a blockbuster movie with high budget is
 
 ### Opening revenue, a more relevant descriptor
 
-Thus, we include another metric, the opening revenue (the box office revenue in the first week) in our IMDb movie dataset. We compute the proportion of the opening revenue of the total gross revenue. We are indeed interested in finding out, **whether speaking positive about the movie in media actually influences audience's intention to go to cinema even after the opening period**. 
+Thus, we include another metric, the opening revenue (the box office revenue in the first week) in our IMDb movie dataset. We compute the proportion of the opening revenue of the total gross revenue. We are indeed interested in finding out, **whether speaking positively about the movie in media actually influences audience's intention to go to cinema even after the opening period**.
 
 From Figure 4, it can be seen that movies with more positive voice in the media are more likely to continue to generate significant revenue after the first week (hence a small percent of the total revenue the first release week) and it is statistically significant. We propose a simple interpretation: good movie will be praised in the media during the first release week, which can result in more people wiling to watch the movie. This implies that movies with positive speaking will have an opening revenue small in proportion since the crowds might show up only later.
 
@@ -78,6 +83,7 @@ In the sequel it will be helpful to consider the three following categories of m
 - (iii) high % after first WE (the percentage of opening revenue over total revenue is greater than the two third quartile).
 
 Put it another way, if a movie has "high % after first WE", this movie normally has good reviews and ratings. More audiences might go to cinema to watch it after this movie has been released for a while, because they heard positive reviews from media or their friends. Vice Versa, if a movie has "high % first WE", more audiences might lose interest in watching this movie as they get to know negative reviews or only fans of this movies go to cinema in the first week. We can hypothesize that (i) a good movie will still attract people after it has been released for the first week (low first WE%), and (ii) a bad movie will attract fewer people after it has been released for the first week (high first WE%). 
+
 ### Lexicon Analysis
 
 To further confirm our findings from sentiment analysis, we computed scores for five lexical terms (warmth, fun, love, emotional, disappointment ad hate) from movie related quotes. The reason is that, those five lexical terms could be employed to understand how people feel and their experience about the movies, when they mentioned the movies in media. 
@@ -85,29 +91,8 @@ To further confirm our findings from sentiment analysis, we computed scores for 
 In Figure 5, we plot a bar chart for the average scores of five lexical terms, in three groups (high vs. intermediate vs. low percentage of box office revenue in the first week). Findings from t-test showed that **people use more hate related
 words to describe movie that has high revenue proportion in the first week (compared to movies with high revenue proportion after first week)** (p-value 0.03). We can say, it seems that good movie gets more audiences for longer time period and more positive voices in media will boost its effects. Although it is more delicate to conclude with the other lexical terms, the trend is (almost) always the expected one: positive terms are associated to movies with high opening revenue proportion while negative terms to movies with low opening revenue proportion.
 
-![Figure 5](assets/sentimentAnalysis.png "Figure 5")
+![Figure 5](assets/sentimentAnalysis.png "sentiment analysis")
 
 ## Conclusion
 
-Our study examines which attribute from voice about movie in media is associated with the box office revenue around the release weeks. The results indicate that, positive voice in the media might result in higher box office revenue over a period of time after the first release week. That means, movies with high revenue after first week (relative to total revenue) are more likely to be associated with more positive words from media. Although we did not take into account of other possible attributes such as casting stars, movie genres for the association with the box office revenue. Our study reveals important finding that, audiences tend to choose movies with more favorable voice from media. Similarly, more hatred words about a movie in media seem more likely to discourage audiences from visiting cinema, even if those movies get big success in the early stage of their life cycle. 
-
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
+Our study examines which attribute from voice about movie in media is associated with the box office revenue around the release weeks. The results indicate that, positive voice in the media might result in higher box office revenue over a period of time after the first release week. That means, movies with high revenue after first week (relative to total revenue) are more likely to be associated with more positive words from media. Although we did not take into account of other possible attributes such as casting stars, movie genres for the association with the box office revenue. Our study reveals important finding that, audiences tend to choose movies with more favorable voice from media. Similarly, more hatred words about a movie in media seem more likely to discourage audiences from visiting cinema, even if those movies get big success in the early stage of their life cycle.
