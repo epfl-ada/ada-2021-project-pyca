@@ -87,9 +87,8 @@ words to describe movie that has high revenue proportion in the first week (comp
 ![Figure 5](assets/sentimentAnalysis.png "Figure 5")
 
 ## Conclusion
-The gold standard for the movie industry would be to be able to predict the total gross revenue of a movie before release. Although we were not able to tackle precisely the problem, our findings suggest a alternative way which require the knowledge of the two following *near release date metrics*:
-- (i) first WE revenue;
-- (ii) polarity of the quotes related to the movie around the release date.
+
+Our study examines which attribute from voice about movie in media is associated with the box office revenue around the release weeks. The results indicate that, positive voice in the media might result in higher box office revenue over a period of time after the first release week. That means, movies with high revenue after first week (relative to total revenue) are more likely to be associated with more positive words from media. Although we did not take into account of other possible attributes such as casting stars, movie genres for the association with the box office revenue. Our study reveals important finding that, audiences tend to choose movies with more favorable voice from media. Similarly, more hatred words about a movie in media seem more likely to discourage audiences from visiting cinema, even if those movies get big success in the early stage of their life cycle. 
 
 
 
