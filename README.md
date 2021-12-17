@@ -1,4 +1,8 @@
 # Predicting Box-Office Receipts from the Main Film Crew's quotes
+## Note
+
+As per [https://ada2021epfl.zulipchat.com/#narrow/stream/302232-Project/topic/Deliverable.20notebook](https://ada2021epfl.zulipchat.com/#narrow/stream/302232-Project/topic/Deliverable.20notebook), we chose to use several notebooks.
+
 ## Abstract
 
 Recent research work has investigated the impact of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
