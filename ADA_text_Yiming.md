@@ -1,5 +1,41 @@
 # Delving deeper into quotebank: can quote sentiment analysis help predict boxoffice?
+
+
+Recent research work has investigated the impact of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
+
+[^Early-Predictions-of-Movie-Success]: https://arxiv.org/abs/1506.05382
+[^The-Power-of-Stars]: https://journals.sagepub.com/doi/10.1509/jmkg.71.4.102
+
+However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how people talk about blockbuster movies in the media coverage. How people talk about movies in media, can be perceived as not only one important source from which mirror speaker's natural and spontaneous view of points about the movies, but also an efficient way to shape others' attitude and intentions to watch movie.
+
+One salient research question in our study is to examine **whether speaking positive about the movie in media coverage triggers an increase in the box office revenue even after the opening period**. We perform text analysis and statistical testing methods to show which text features from a speaker's quotes in media might influence the box-office revenue. 
+
 Our first analysis could not allow for sentiement analysis: the quotes linked to movies were from the movie crew, which induces a bias. We now propose another approach.
+
+## Introduction
+
+The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^box-office-revenue-2019]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019[^global-box-office-revenue-per-year].
+
+![global box office revenue per year by format](./assets/global-box-office-revenue-per-year.png)
+*Global box office revenue per year by format*
+
+[^box-office-revenue-2019]: https://www.billboard.com/articles/news/8547827/2019-global-box-office-revenue-hit-record-425b-despite-4-percent-dip-in-us
+[^global-box-office-revenue-per-year]: https://www.statista.com/statistics/259987/global-box-office-revenue
+
+In recent years, numerous research work has uncovered which attributes might predict the financial success of motion pictures after they were released, and why some movies could be "hits" or "flops" using automation methods[^buzz-recommandation-internet][^blogs-advertising-local-market][^predicting-motion-picture].
+
+[^buzz-recommandation-internet]: [Buzz et recommandations sur Internet: quels effets sur le box-office?](https://doi.org/10.1177%2F076737010702200304)
+[^blogs-advertising-local-market]: [Blogs, Advertising, and Local-Market Movie Box Office Performance](https://doi.org/10.1287/mnsc.2013.1732)
+[^predicting-motion-picture]: [Predicting box-office success of motion pictures with neural networks](https://doi.org/10.1016/j.eswa.2005.07.018)
+
+We explore the important role of the claims about movies from a speaker's quotes in media, and its effect on influencing audiences' decisions to go to cinema around release dates. Particularly, we are focused on the proportion of opening revenue (revenue in the first week) in the overall box-office revenue, to measure the financial success of movies. It is more relevant to examine the effectiveness of a speaker's quotes on the box office revenue. We expect that how people talk about movies in media will not generate immediate effect on box office revenue in a very short time period (i.e., within one week after release dates). More people are interested in going to cinema after the positive reviews has widely spead over a period of time in public. 
+
+In our study, we investiagte the following sub-questions:
+
+* *Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?* *How much does the sentiment polarity of movie related quotes influence the total box-office revenue?* *
+* *Does speaking positive in media about a movie result in better box office revenue, even after the opening period?*
+* *Which lexicon term about a movie are more liekly to be mentioned when it comes to a movie with high revenue after the opening period?*
+
 ## A first naïve attempt
 
 We first perform sentiment analysis to explore to what extent sentiment polarity from a speaker's quotation in coverage press affects the financial success of movies. More precisely
