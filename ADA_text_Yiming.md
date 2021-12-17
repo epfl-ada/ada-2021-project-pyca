@@ -6,7 +6,7 @@ Recent research work has investigated the impact of attributes (e.g., budget, re
 
 However, an important attribute in forecasting the box-office receipts has remained mostly unnoticed: what and how people talk about movies in the media.
 
-How people talk about a movie in the media is not only a way to know a speaker's view about a movie, but it will also others and could indicate the eventual success of a movie.
+How people talk about a movie in the media is not only a way to know a speaker's view about a movie, but it will also influence others and could indicate the eventual success of a movie.
 
 One salient research question in our study is to examine **how the sentiments in the quotes related to a movie influence the box office revenue after the opening period**. We perform text analysis and statistical testing methods to show which text features from a speaker's quotes might influence the box-office revenue.
 
@@ -37,11 +37,10 @@ It is more relevant to examine the effectiveness of a speaker's quotes on the bo
 In our study, we investigate the following sub-questions:
 
 * [*Does the quantity of quotes from the main film crew provide a boost to box-office revenue ?*](#1-influence-of-the-movie-crews-quotes)
-* *How much does the sentiment polarity of movie related quotes influence the total box-office revenue ?*
-* *Does speaking positively in media about a movie result in better box office revenue, even after the opening period ?*
-* *Which lexicon term about a movie are more likely to be mentioned when it comes to a movie with high revenue after the opening period ?*
-
-## 1. Influence of the movie crew's quotes
+* [*How much does the sentiment polarity of movie related quotes influence the total box-office revenue ?*](#2-first-naïve-attempt-linking-the-sentiment-to-the-global-box-office-revenues)
+* [*Does speaking positively in media about a movie result in better box office revenue, even after the opening period ?*](#3-a-more-relevant-descriptor-the-first-week-revenues)
+* [*Which lexicon term about a movie are more likely to be mentioned when it comes to a movie with high revenue after the opening period ?*](#4-lexicon-analysis)
+## 1. Pre-analysis: Influence of the movie crew's quotes
 
 In our preliminary analysis, we plot the amount of quotes authored by the film crew around the release date. There is a peak in the main crew’s quotes in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the Spearman correlation graph shows, box office revenue and main crew’s quotes seem to follow some sort of power law (it is positive significant).
 
@@ -51,14 +50,14 @@ Below are some early artifacts produced by our analysis, showing interesting cor
 
 ![Press Activity](./assets/gross_vs_occurrences.png)
 
+
 **See [analysisQuote.ipynb](./analysis/analysisQuote.ipynb) for the preliminary analysis.**
 
-## Delving deeper into Quotebank with sentiment analysis
 Our first approach to relate quotes to movies was irrelevant in the context of sentiment analysis since crew member would not speak freely about their movie. In this part we propose a different approach.
 
-### A first naïve attempt
+## 2. First naïve attempt: linking the sentiment to the global box office revenues
 
-We first perform sentiment analysis to explore to what extent sentiment polarity from a speaker's quotation in coverage press affects the financial success of movies. More precisely
+We first performed sentiment analysis to explore to what extent sentiment polarity from a speaker's quotation in coverage press affects the financial success of movies. More precisely
 - we considered **50 blockbuster movies** between the year 2015-2019 in the US;
 - we selected quotes related to the relevant movies around release date (+- 10 days). For each selected movie we manually prepared some keys from the movie name to identify quotes related to the movie;
 - in the visualization we split the movies into three categories: (i) the number of movie related quotes is less than 100; (ii) the number of movie related quotes is between 100 and 300; (iii) the number of movie related quotes is greater than 300. This procedure is meant to give more information to the reader.
@@ -69,7 +68,7 @@ We investigate a possible correlation between box office revenue and average sen
 
 This is not too surprising. For instance a blockbuster movie with high budget is very likely to generate high box office, even if people are very critical about it. For instance can you imaging a Star Wars movie with very low box office revenues, regardless of how critical people talk about it? 
 
-### Opening revenue, a more relevant descriptor
+## 3. A more relevant descriptor: the first week revenues
 
 Thus, we include another metric, the opening revenue (the box office revenue in the first week) in our IMDb movie dataset. We compute the proportion of the opening revenue of the total gross revenue. We are indeed interested in finding out, **whether speaking positively about the movie in media actually influences audience's intention to go to cinema even after the opening period**.
 
@@ -84,7 +83,7 @@ In the sequel it will be helpful to consider the three following categories of m
 
 Put it another way, if a movie has "high % after first WE", this movie normally has good reviews and ratings. More audiences might go to cinema to watch it after this movie has been released for a while, because they heard positive reviews from media or their friends. Vice Versa, if a movie has "high % first WE", more audiences might lose interest in watching this movie as they get to know negative reviews or only fans of this movies go to cinema in the first week. We can hypothesize that (i) a good movie will still attract people after it has been released for the first week (low first WE%), and (ii) a bad movie will attract fewer people after it has been released for the first week (high first WE%). 
 
-### Lexicon Analysis
+## 4. Lexicon Analysis
 
 To further confirm our findings from sentiment analysis, we computed scores for five lexical terms (warmth, fun, love, emotional, disappointment ad hate) from movie related quotes. The reason is that, those five lexical terms could be employed to understand how people feel and their experience about the movies, when they mentioned the movies in media. 
 
