@@ -36,6 +36,18 @@ In our study, we investiagte the following sub-questions:
 * *Does speaking positive in media about a movie result in better box office revenue, even after the opening period?*
 * *Which lexicon term about a movie are more liekly to be mentioned when it comes to a movie with high revenue after the opening period?*
 
+## Preliminary analysis 
+
+In our preliminary analysis, we plot change of quantity in the main film crew’s quotes around the release date. There is a peak in the main crew’s quotes in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the Spearman correlation graph shows, box office revenue and main crew’s quotes seem to follow some sort of power law (it is positive significant).
+
+Below are some early artifacts produced by our analysis, showing interesting correlations respectively between the number of quotes and the time to the release date, and between the number of quotes and the box office success.
+
+![Press Activity](./assets/quotes_around_release.png)
+
+![Press Activity](./assets/gross_vs_occurrences.png)
+
+**See [analysisQuote.ipynb](./analysis/analysisQuote.ipynb) for the preliminary analysis.**
+
 ## A first naïve attempt
 
 We first perform sentiment analysis to explore to what extent sentiment polarity from a speaker's quotation in coverage press affects the financial success of movies. More precisely
