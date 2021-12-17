@@ -1,4 +1,6 @@
-# Predicting Box-Office Receipts from the Main Film Crew's quotes
+# Box-office and Quotebank
+
+**Data story** [link](https://axgoujon.github.io/adatastory/).
 ## Note
 
 As per [https://ada2021epfl.zulipchat.com/#narrow/stream/302232-Project/topic/Deliverable.20notebook](https://ada2021epfl.zulipchat.com/#narrow/stream/302232-Project/topic/Deliverable.20notebook), we chose to use several notebooks.
