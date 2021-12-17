@@ -40,25 +40,31 @@ In our study, we investigate the following sub-questions:
 * [*How much does the sentiment polarity of movie related quotes influence the total box-office revenue ?*](#2-first-naïve-attempt-linking-the-sentiment-to-the-global-box-office-revenues)
 * [*Does speaking positively in media about a movie result in better box office revenue, even after the opening period ?*](#3-a-more-relevant-descriptor-the-first-week-revenues)
 * [*Which lexicon term about a movie are more likely to be mentioned when it comes to a movie with high revenue after the opening period ?*](#4-lexicon-analysis)
-## 1. Pre-analysis: Influence of the movie crew's quotes
 
-In our preliminary analysis, we plot the amount of quotes authored by the film crew around the release date. There is a peak in the main crew’s quotes in the media coverage within one week after the movie has been released. Thus, we can assume that the main crew have been engaged in frequent media exposure for movie promotion around movie release dates. Further the Spearman correlation graph shows, box office revenue and main crew’s quotes seem to follow some sort of power law (it is positive significant).
+## 1. Pre-analysis: Influence of the crew's quotes
 
-Below are some early artifacts produced by our analysis, showing interesting correlations respectively between the number of quotes and the time to the release date, and between the number of quotes and the box office success.
+The first thing we wanted to make sure of was whether we actually had quotes related to a movie, in particular using the crew list, and see if any information could be extracted from this, like the quality of the quotes.
+Thus, we decided to plot the average amount of quotes authored by the film crew around the release date.
 
 ![Press Activity](./assets/quotes_around_release.png)
 
+Our first observation is that we indeed have quotes from the crew, which is a good start !
+
+There is a peak in the number of quotes in the media coverage within the week after the movie has been released. For this reason, we can assume that the main crew has been engaged in frequent media exposure for movie promotion around movie release dates. The global shape of the movie crew's average number of mediatic intervention resembles a normal distribution centered a few days after the release, starting to rise two weeks before, and lasting until three weeks after the release.
+
+As the main question of this article is to observe the influence of the quotes on the success (represented by the total gross), we also wanted to see if any correlation could be observed between the number of quotes and the total gross.
+
 ![Press Activity](./assets/gross_vs_occurrences.png)
 
+There seems to be an overall trend, that there is a correlation between the number of quotes and the total gross, specifically a power law relation. This is confirmed by a statistical analysis (Spearman), although the dispersion of the results seems to be quite important for the movies with a small number of quotes.
 
-**See [analysisQuote.ipynb](./analysis/analysisQuote.ipynb) for the preliminary analysis.**
-
-Our first approach to relate quotes to movies was irrelevant in the context of sentiment analysis since crew member would not speak freely about their movie. In this part we propose a different approach.
+These two artifacts introduce interesting relations between the mediatic life of a movie and its success. However, the first plot shows that during the whole year around the release there seems to be an average of 2500 quotes, which made us realize that there were probably lots of false positive in our data, and that the simple criterion of using the quotes authored by the crew was not enough.
 
 ## 2. First naïve attempt: linking the sentiment to the global box office revenues
+Our first approach to relate quotes to movies didn't use sentiment analysis since crew member would probably not speak freely about their movie, their role is to sell it, so they can't actually say if they think it's bad. In this part we propose a different approach.
 
-We first performed sentiment analysis to explore to what extent sentiment polarity from a speaker's quotation in coverage press affects the financial success of movies. More precisely
-- we considered **50 blockbuster movies** between the year 2015-2019 in the US;
+We first performed sentiment analysis to explore to what extent sentiment polarity from a speaker's quotations in coverage press affects the financial success of movies. More precisely
+- we considered **the top 50 movies in term of box office results** between the year 2015-2019 in the US;
 - we selected quotes related to the relevant movies around release date (+- 10 days). For each selected movie we manually prepared some keys from the movie name to identify quotes related to the movie;
 - in the visualization we split the movies into three categories: (i) the number of movie related quotes is less than 100; (ii) the number of movie related quotes is between 100 and 300; (iii) the number of movie related quotes is greater than 300. This procedure is meant to give more information to the reader.
  
