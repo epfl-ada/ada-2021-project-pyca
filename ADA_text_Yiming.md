@@ -46,7 +46,7 @@ Below are some early artifacts produced by our analysis, showing interesting cor
 
 **See [analysisQuote.ipynb](./analysis/analysisQuote.ipynb) for the preliminary analysis.**
 
-## Diving deeper into quotebank with sentiment analysis
+## Delving deeper into quotebank with sentiment analysis
 Our first approach to relate quotes to movies was irrelevant in the context of sentiment analysis since crew member would not speak freely about their movie. In this part we propose a different approach.
 ### A first naïve attempt
 
@@ -86,8 +86,9 @@ words to describe movie that has high revenue proportion in the first week (comp
 
 ## Conclusion
 The gold standard for the movie industry would be to be able to predict the total gross revenue of a movie before release. Although we were not able to tackle precisely the problem, our findings suggest a alternative way which require the knowledge of the two following *near release date metrics*:
-- first WE revenue
-- polarity of the quotes related to the movie around the release date
+- (i) first WE revenue;
+- (ii) polarity of the quotes related to the movie around the release date.
+
 
 
 ```python
