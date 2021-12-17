@@ -107,20 +107,28 @@ In the following analyses it will be helpful to consider the three following cat
 - (ii) intermediate score (the percentage of opening revenue over total revenue is between the third and the two third quartile);
 - (iii) high % after first WE (the percentage of opening revenue over total revenue is greater than the two third quartile).
 
-Put it another way, if a movie has "high % after first WE", this movie normally has good reviews and ratings. More audiences might go to cinema to watch it after this movie has been released for a while, because they heard positive reviews from media or their friends. Vice Versa, if a movie has "high % first WE", more audiences might lose interest in watching this movie as they get to know negative reviews or only fans of this movies go to cinema in the first week. We can hypothesize that (i) a good movie will still attract people after it has been released for the first week (low first WE%), and (ii) a bad movie will attract fewer people after it has been released for the first week (high first WE%). 
+Put it another way, if a movie has "high % after first WE", this movie normally has good reviews and ratings. More audiences might go to cinema to watch it after this movie has been released for a while, because they heard positive reviews from media or their friends. Vice Versa, if a movie has "high % first WE", more audiences might lose interest in watching this movie as they get to know negative reviews or only fans of this movies go to cinema in the first week. We can hypothesize that (i) a good movie will still attract people after it has been released for the first week (low first WE%), and (ii) a bad movie will attract fewer people after it has been released for the first week (high first WE%).
 
 ## 4. Lexicon Analysis
 
-To further confirm our findings from sentiment analysis, we computed scores for five lexical terms (warmth, fun, love, emotional, disappointment ad hate) from movie related quotes. The reason is that, those five lexical terms could be employed to understand how people feel and their experience about the movies, when they mentioned the movies in media. 
+To further confirm our findings from the previous sentiment analysis, we computed, from movie related quotes, scores for six lexical terms: warmth, fun, love, emotional, disappointment and hate.
+The reason is that those six lexical terms could be employed to understand how people who talk about the movie in the media feel about it and what they experienced.
 
-In Figure 5, we plot a bar chart for the average scores of five lexical terms, in three groups (high vs. intermediate vs. low percentage of box office revenue in the first week). Findings from t-test showed that **people use more hate related
-words to describe movie that has high revenue proportion in the first week (compared to movies with high revenue proportion after first week)** (p-value 0.03). We can say, it seems that good movie gets more audiences for longer time period and more positive voices in media will boost its effects. Although it is more delicate to conclude with the other lexical terms, the trend is (almost) always the expected one: positive terms are associated to movies with high opening revenue proportion while negative terms to movies with low opening revenue proportion.
+In Figure 5, we plot a bar chart for the average scores of six lexical terms, in three groups: high, intermediate and low first week percentage of box office revenue.
 
 ![Figure 5](assets/sentimentAnalysis.png "sentiment analysis")
 
+We found a statistically meaningful difference (thanks to a t-test, p-value 0.03) relation about the first week revenue and the amount of hate related terms: **people use more hate related words to describe movie that have a higher opening revenues proportion than those with low opening revenues**.
+
+We can say, it seems that good movie gets more audiences for longer time period and more positive voices in media will boost its effects. Although the results are not as conclusive with the other lexical terms, the trend is mostly the expected one: positive terms are associated to movies with high opening revenue proportion while negative terms are related to movies with low opening revenue proportion.
+
 ## Conclusion
 
-Our study examines which attribute from voice about movie in media is associated with the box office revenue around the release weeks. The results indicate that, positive voice in the media might result in higher box office revenue over a period of time after the first release week. That means, movies with high revenue after first week (relative to total revenue) are more likely to be associated with more positive words from media. Although we did not take into account of other possible attributes such as casting stars, movie genres for the association with the box office revenue. Our study reveals important finding that, audiences tend to choose movies with more favorable voice from media. Similarly, more hatred words about a movie in media seem more likely to discourage audiences from visiting cinema, even if those movies get big success in the early stage of their life cycle.
+Our study examined which attributes from media quotes related to a movie is associated with the box office revenue around the release weeks.
+
+The results indicate that a positive voice in the media might result in higher box office revenue over a period of time after the first release week. That means that movies with high revenue after the first week (relative to total revenue) are more likely to be associated with more positive words from media.
+
+Although we did not take into account other possible attributes such as casting stars, movie genres for the association with the box office revenue. Our study reveals important finding that audiences tend to choose movies with more favorable voice from media. Similarly, more hatred words about a movie in media seem more likely to discourage audiences from visiting cinema, even if those movies get big success in the early stage of their life cycle.
 
 ## Sources
 In our study, we combine the quotation-centric version of the ```Quotebank``` database[^quotebank-database] with the ```IMDb movie information database``` [^imdb-database] and box-office receipts from ```Box Office Mojo```[^mojo-database].
