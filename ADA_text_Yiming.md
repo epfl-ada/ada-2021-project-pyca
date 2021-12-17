@@ -10,8 +10,6 @@ How people talk about a movie in the media is not only a way to know a speaker's
 
 One salient research question in our study is to examine **how the sentiments in the quotes related to a movie influence the box office revenue after the opening period**. We perform text analysis and statistical testing methods to show which text features from a speaker's quotes might influence the box-office revenue.
 
-We perform two analysis, the first one is only interested in the quotes from someone related to the movie (actor, director, etc), while the second uses all the quotes that mention the title of the movie, or a related term.
-
 ## Introduction
 
 The motion pictures industry has become a roaring success that reached a all time high 42 billion U.S. dollars in the global box office in 2019[^box-office-revenue-2019]. In U.S. and Canada, the box office receipt is over 10 billion U.S. dollars in the year of 2015-2019[^us-box-office-revenue-per-year].
@@ -60,29 +58,51 @@ There seems to be an overall trend, that there is a correlation between the numb
 
 These two artifacts introduce interesting relations between the mediatic life of a movie and its success. However, the first plot shows that during the whole year around the release there seems to be an average of 2500 quotes, which made us realize that there were probably lots of false positive in our data, and that the simple criterion of using the quotes authored by the crew was not enough.
 
-## 2. First naïve attempt: linking the sentiment to the global box office revenues
+## A better dataset
 Our first approach to relate quotes to movies didn't use sentiment analysis since crew member would probably not speak freely about their movie, their role is to sell it, so they can't actually say if they think it's bad. In this part we propose a different approach.
 
+In particular, instead of using the quotes from the crew, which are biased and contain a lot of false positive (all quotes from the crew aren't necessarily about the movie), we extracted the quotes which mention the title of the movie or a related term, ie. for the movie `Star Wars: Episode VII - The Force Awakens`, we search for quotes that mention `Star Wars` or `The force awakens`.
+
+This method is not foolproof either, some movies like `It` or `Sing` yielded a lot of false positive and we had to ignore them in our analyses. Even movies such as `Thor: Ragnarok`, where we searched for `Thor` and `Ragnarok`, triggered lots of false positive as a word like `auTHORities` was matched !
+
+However, the quotes we extract with this method still are overally more meaningful and more feated to sentiment analysis.
+
+## 2. First naïve attempt: linking the sentiment to the global box office revenues
 We first performed sentiment analysis to explore to what extent sentiment polarity from a speaker's quotations in coverage press affects the financial success of movies. More precisely
 - we considered **the top 50 movies in term of box office results** between the year 2015-2019 in the US;
 - we selected quotes related to the relevant movies around release date (+- 10 days). For each selected movie we manually prepared some keys from the movie name to identify quotes related to the movie;
 - in the visualization we split the movies into three categories: (i) the number of movie related quotes is less than 100; (ii) the number of movie related quotes is between 100 and 300; (iii) the number of movie related quotes is greater than 300. This procedure is meant to give more information to the reader.
- 
-We investigate a possible correlation between box office revenue and average sentiment polarity score for movie related quotes in the Figure 3. To find quantify our analysis, we used Spearman Correlation and Pearson Correlation statistical tests. The results from both tests are not statistically significant, **it is inconclusive to say whether sentiment polarity from quotes about movies influences a movie's financial success from our first data analysis**. 
+
+We investigate a possible correlation between box office revenue and average sentiment polarity score for movie related quotes in the `Figure 3`.
 
 ![Figure 3](assets/polarityAnalysis_totalGross.png "Figure 3")
 
-This is not too surprising. For instance a blockbuster movie with high budget is very likely to generate high box office, even if people are very critical about it. For instance can you imaging a Star Wars movie with very low box office revenues, regardless of how critical people talk about it? 
+To quantify our analysis, we used Spearman correlation and Pearson correlation statistical tests. The results from both tests are not statistically significant, **it is inconclusive to say whether sentiment polarity from quotes about movies influences a movie's financial success from our first data analysis**.
 
-## 3. A more relevant descriptor: the first week revenues
+This is not too surprising. For instance a blockbuster movie with high budget is very likely to generate high box office, even if people are very critical about it. For instance can you imaging a Star Wars movie with very low box office revenues, regardless of how critical people talk about it ? Probably not !
 
-Thus, we include another metric, the opening revenue (the box office revenue in the first week) in our IMDb movie dataset. We compute the proportion of the opening revenue of the total gross revenue. We are indeed interested in finding out, **whether speaking positively about the movie in media actually influences audience's intention to go to cinema even after the opening period**.
+Note that it could also mean that our analysis is imprecise or that the set of quotes we extracted isn't of good quality. To sort this out, we decided to perform further analysis, to see if we could prove or disprove our first hypothesis.
 
-From Figure 4, it can be seen that movies with more positive voice in the media are more likely to continue to generate significant revenue after the first week (hence a small percent of the total revenue the first release week) and it is statistically significant. We propose a simple interpretation: good movie will be praised in the media during the first release week, which can result in more people wiling to watch the movie. This implies that movies with positive speaking will have an opening revenue small in proportion since the crowds might show up only later.
+## 3. A more relevant descriptor: the first week revenue
+
+In order to check whether the explanation of the previous results was really that some movie saga with a big fanbase would always yield a great box office result, we included another metric: the opening revenue, which is the box office revenue in the first week.
+
+We compute the proportion of the opening revenue of the total gross revenue. We are indeed interested in finding out, **whether speaking positively about the movie in media actually influences audience's intention to go to cinema even after the opening period**.
+
+Thus, we need to check whether there is a change in revenue between the first week and the followings. For this purpose we plotted the first week results depending on the average sentiment score of the quotes:
 
 ![Figure 4](assets/polarityAnalysis_percentGross.png "Figure 4")
 
-In the sequel it will be helpful to consider the three following categories of movies
+From `Figure 4`, although there is a high variance, we can see that movies with more positive voice in the media seem more likely to have a smaller percentage of the total revenue the first release week, and this relation is actually statistically significant.
+
+We propose a simple interpretation: good movie will be praised in the media during the first release week, which can result in more people wiling to watch the movie later on. This implies that movies with positive reviews will have an opening revenue smaller in proportion since people will come see the movie later and will keep showing up for a longer period of time.
+
+On the other hand, a bad movie will attract less people after the first week (because critics have revealed that it isn't a great movie), and so the relative revenue is higher on the first week.
+
+The basic idea is that people will show up the first week in any case, but the following weeks people will come more if the movie was deemed good by the critics.
+
+### Takeaway
+In the following analyses it will be helpful to consider the three following categories of movies
 - (i) high % first WE (in this group, the percentage of opening revenue over total revenue is less than the third quartile);
 - (ii) intermediate score (the percentage of opening revenue over total revenue is between the third and the two third quartile);
 - (iii) high % after first WE (the percentage of opening revenue over total revenue is greater than the two third quartile).
