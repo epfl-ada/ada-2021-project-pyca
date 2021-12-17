@@ -1,5 +1,4 @@
-# Delving deeper into quotebank: can quote sentiment analysis help predict boxoffice?
-
+# Diving deeper into quotebank: does speaking positive about a movie boost box-office revenue?
 
 Recent research work has investigated the impact of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
 
