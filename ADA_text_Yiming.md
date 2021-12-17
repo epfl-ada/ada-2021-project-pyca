@@ -17,11 +17,11 @@ This is not too surprising. For instance a blockbuster movie with high budget is
 
 Thus, we include another metric, the opening revenue (the box office revenue in the first week) in our IMDb movie dataset. We compute the proportion of the opening revenue of the total gross revenue. We are indeed interested in finding out, **whether speaking positive about the movie in media actually influences audience's intention to go to cinema even after the opening period**. 
 
-From Figure 4, it can be seen that movies with more positive voice in the media are more likely to generate a small percent of the total revenue the first release week (it is statistically significant). We propose a simple interpretation: good movie will be praised in the media in the first release week, which will induce more people to be wiling to watch the movie. As such the opening revenue could only be a small proportion of the total revenue. 
+From Figure 4, it can be seen that movies with more positive voice in the media are more likely to generate a small percent of the total revenue the first release week (it is statistically significant). We propose a simple interpretation: good movie will be praised in the media during the first release week, which can result in more people wiling to watch the movie. This implies that movies with positive speaking will have an opening revenue small in proportion since the crowds might show up only later.
 
 ![Figure 4](assets/polarityAnalysis_percentGross.png "Figure 4")
 
-In the sequel we consider the three following categories of movies
+In the sequel it will be helpful to consider the three following categories of movies
 - (i) high % first WE (in this group, the percentage of opening revenue over total revenue is less than the third quantile);
 - (ii) intermediate score (the percentage of opening revenue over total revenue is between the third and the two third quantile);
 - (iii) high % after first WE (the percentage of opening revenue over total revenue is greater than the two third quantile).
@@ -31,11 +31,15 @@ Put it another way, if a movie has "high % after first WE", this movie normally 
 
 To further confirm our findings from sentiment analysis, we computed scores for five lexical terms (warmth, fun, love, emotional, disappointment ad hate) from movie related quotes. The reason is that, those five lexical terms could be employed to understand how people feel and their experience about the movies, when they mentioned the movies in media. 
 
-In Figure 5, we plot barchart for the average scores of five lexical terms, in three groups(high vs. intermediate vs. low percentage of box office revenue in the first week). Findings from t-test showed that people use more hate related 
-words to describe movie that has high revenue proportion in the first week (compared to movies with high revenue proportion after first week). We can say, it seems that good movie gets more audiences for longer time period and more positive voices in media will boost its effects.
+In Figure 5, we plot barchart for the average scores of five lexical terms, in three groups (high vs. intermediate vs. low percentage of box office revenue in the first week). Findings from t-test showed that **people use more hate related 
+words to describe movie that has high revenue proportion in the first week (compared to movies with high revenue proportion after first week)** (p-value 0.03). We can say, it seems that good movie gets more audiences for longer time period and more positive voices in media will boost its effects. Although it is more delicate to conclude with the other lexical terms, the trend is (almost) always the expected one: positive terms are associated to movies with high opening revenue proportion while negative terms to movies with low opening revenue proportion.
 
 ![Figure 5](assets/sentimentAnalysis.png "Figure 5")
 
+## Conclusion
+The gold standard for the movie industry would be to be able to predict the total gross revenue of a movie before release. Although we were not able to tackle precisely the problem, our findings suggest a alternative way which require the knowledge of the two following *near release date metrics*:
+- first WE revenue
+- polarity of the quotes related to the movie around the release date
 
 
 ```python
