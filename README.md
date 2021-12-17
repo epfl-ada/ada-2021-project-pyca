@@ -1,4 +1,6 @@
-# Predicting Box-Office Receipts from the Main Film Crew's quotes
+# Box-office and Quotebank
+
+**Data story** [link](https://axgoujon.github.io/adatastory/).
 ## Note
 
 As per [https://ada2021epfl.zulipchat.com/#narrow/stream/302232-Project/topic/Deliverable.20notebook](https://ada2021epfl.zulipchat.com/#narrow/stream/302232-Project/topic/Deliverable.20notebook), we chose to use several notebooks.
@@ -102,7 +104,7 @@ Double check code and prepare the final storytelling about our data results.
 
 ## Organization within the team
 
-* [Alex](https://github.com/PhotonAmpere): Web scraping datasets, initial data analysis, pre-process datasets, develop algorithm, model selection
+* [Alex](https://github.com/PhotonAmpere): Web scraping datasets, initial data analysis, pre-process datasets, data visialization
 * [Christos](https://github.com/Yo-art7): Data visualization, running tests, evaluate model performance
 * [Pierre](https://github.com/pgimalac): Develop algorithm, feature engineering, model selection, code quality
 * [Yiming](https://github.com/yiming-li3008): Analyze quote text using NLP methods, write project data story
