@@ -1,4 +1,3 @@
-# Diving deeper into quotebank: does speaking positive about a movie boost box-office revenue?
 
 Recent research work has investigated the impact of attributes (e.g., budget, release time) in predicting the box-office revenues[^Early-Predictions-of-Movie-Success]. Particularly, lead actors have been considered as one of the critical drivers for success in the motion pictures industry[^The-Power-of-Stars].
 
@@ -47,7 +46,9 @@ Below are some early artifacts produced by our analysis, showing interesting cor
 
 **See [analysisQuote.ipynb](./analysis/analysisQuote.ipynb) for the preliminary analysis.**
 
-## A first naïve attempt
+## Diving deeper into quotebank with sentiment analysis
+Our first approach to relate quotes to movies was irrelevant in the context of sentiment analysis since crew member would not speak freely about their movie. In this part we propose a different approach.
+### A first naïve attempt
 
 We first perform sentiment analysis to explore to what extent sentiment polarity from a speaker's quotation in coverage press affects the financial success of movies. More precisely
 - we considered **50 blockbuster movies** between the year 2015-2019 in the US;
@@ -60,11 +61,11 @@ We investigate a possible correlation between box office revenue and average sen
 
 This is not too surprising. For instance a blockbuster movie with high budget is very likely to generate high box office, even if people are very critical about it. For instance can you imaging a Star Wars movie with very low box office revenues, regardless of how critical people talk about it? 
 
-## Opening revenue, a more relevant descriptor
+### Opening revenue, a more relevant descriptor
 
 Thus, we include another metric, the opening revenue (the box office revenue in the first week) in our IMDb movie dataset. We compute the proportion of the opening revenue of the total gross revenue. We are indeed interested in finding out, **whether speaking positive about the movie in media actually influences audience's intention to go to cinema even after the opening period**. 
 
-From Figure 4, it can be seen that movies with more positive voice in the media are more likely to generate a small percent of the total revenue the first release week (it is statistically significant). We propose a simple interpretation: good movie will be praised in the media during the first release week, which can result in more people wiling to watch the movie. This implies that movies with positive speaking will have an opening revenue small in proportion since the crowds might show up only later.
+From Figure 4, it can be seen that movies with more positive voice in the media are more likely to continue to generate significant revenue after the first week (hence a small percent of the total revenue the first release week) and it is statistically significant. We propose a simple interpretation: good movie will be praised in the media during the first release week, which can result in more people wiling to watch the movie. This implies that movies with positive speaking will have an opening revenue small in proportion since the crowds might show up only later.
 
 ![Figure 4](assets/polarityAnalysis_percentGross.png "Figure 4")
 
@@ -74,7 +75,7 @@ In the sequel it will be helpful to consider the three following categories of m
 - (iii) high % after first WE (the percentage of opening revenue over total revenue is greater than the two third quantile).
 
 Put it another way, if a movie has "high % after first WE", this movie normally has good reviews and ratings. More audiences might go to cinema to watch it after this movie has been released for a while, because they heard positive reviews from media or their friends. Vice Versa, if a movie has "high % first WE", more audiences might lose interest in watching this movie as they get to know negative reviews or only fans of this movies go to cinema in the first week. We can hypothesize that (i) a good movie will still attract people after it has been released for the first week (low first WE%), and (ii) a bad movie will attract fewer people after it has been released for the first week (high first WE%). 
-## Lexicon Analysis 
+### Lexicon Analysis 
 
 To further confirm our findings from sentiment analysis, we computed scores for five lexical terms (warmth, fun, love, emotional, disappointment ad hate) from movie related quotes. The reason is that, those five lexical terms could be employed to understand how people feel and their experience about the movies, when they mentioned the movies in media. 
 
