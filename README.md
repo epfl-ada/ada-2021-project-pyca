@@ -71,17 +71,14 @@ Below are some early artifacts produced by our analysis, showing interesting cor
 
 **See [analysisQuote.ipynb](./analysis/analysisQuote.ipynb) for the preliminary analysis.**
 
-**Genre difference in the effect of quotes on revenue :**
-Further we will examine the effect of the main crew’s quotes on revenue for each genre. We will perform a pair-wise KS statistic heat map to show whether the genre differs in the main crew’s quotes, and plot the correlation graph between the main crew’s quotes and revenue for each movie category.
+**Percentage of box office revenue after first week release**
+We compute box office revenue in three categories below:
+- (i) high % first WE (in this group, the percentage of opening revenue over total revenue is less than the third quantile);
+- (ii) intermediate score (the percentage of opening revenue over total revenue is between the third and the two third quantile);
+- (iii) high % after first WE (the percentage of opening revenue over total revenue is greater than the two third quantile).
 
-**Main crew’s quote frequency :**
-We compute the number of quotes for each movie related speaker. We consider top 20 speakers who have the highest number of quotes in the media coverage (vs. 20 lowest speakers). By doing so, we expect to examine whether the main crew who appear more often in the media coverage (vs. who has lowest media exposure) have greater influence on the box office revenue.
-
-**Sentiment analysis and topic detection :**
-We plan to pre-process text using NLP libraries (namely `spacy`, `nltk`, `genism` and `sklearn`). First, we will detect the sentiment polarity score from quotes with dictionary-based package `Afinn`. Then, we compute the number of topics for each speaker’s total quotes with LDA method (`pyLDAvis` from `genism`).
-
-**Model for prediction :**
-We code the box office revenue in binary (failure = 0, success = 1). After that we train our predict models (e.g., logistic regression model, SVM and random forests) with cross-validation for our task. In the end we evaluate the accuracy rate for each predictive model.
+**Sentiment analysis and semantic analysis :**
+We plan to pre-process text using NLP libraries (namely `spacy`, `nltk`, `genism` and `sklearn`). First, we will detect the sentiment polarity score from quotes with dictionary-based package `Afinn`. Then, we compute values for five lexicon terms ("warmth", "fun", "love", "emotional", "disappointment", "hate") using package `Empath` for movie related quotes. 
 
 
 ## Project Timeline
@@ -90,13 +87,13 @@ We code the box office revenue in binary (failure = 0, success = 1). After that 
 Project proposal, web scraping all available datasets, initial descriptive analysis.
 
 **Week 2** (22 Nov-28 Nov): 
-Data cleaning, feature selection for all variables, compute textual characteristics of the quotes (e.g., sentiment polarity, topic classification), compute 20 speakers with highest (vs. lowest) number of quotes, data standardized.
+Data cleaning, feature selection for all variables, compute textual characteristics of the quotes (e.g., sentiment polarity, semantic analysis), compute percentage of opening revenue relative to total revenue for box-office. 
 
 **Week 3** (29 Nov-5 Dec):
-Training data to predictive models (e.g., logistic regression, SVM) with cross validation methods, evaluate the model performance.
+Visualize data and test statistically significant 
 
 **Week 4** (6 Dec-12 Dec):
-Wrap up results, visualize data and write down data stories.
+Wrap up results, and write down data stories.
 
 **Week 5** (13 Dec-17 Dec): 
 Double check code and prepare the final storytelling about our data results.
@@ -105,8 +102,8 @@ Double check code and prepare the final storytelling about our data results.
 ## Organization within the team
 
 * [Alex](https://github.com/PhotonAmpere): Web scraping datasets, initial data analysis, pre-process datasets, data visialization
-* [Christos](https://github.com/Yo-art7): Data visualization, running tests, evaluate model performance
-* [Pierre](https://github.com/pgimalac): Develop algorithm, feature engineering, model selection, code quality
+* [Christos](https://github.com/Yo-art7): running tests, prepare data story
+* [Pierre](https://github.com/pgimalac): Develop algorithm, feature engineering, code quality
 * [Yiming](https://github.com/yiming-li3008): Analyze quote text using NLP methods, write project data story
 
 
